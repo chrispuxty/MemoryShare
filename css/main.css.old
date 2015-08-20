@@ -1,0 +1,348 @@
+@charset "utf-8";
+/* Master Stylesheet for Dementia Project */
+
+@font-face {
+    font-family: Planar;
+    src: url('Planer_Reg.ttf');
+}
+
+html,body{
+  height:100%; width: 100%; font-family: Planar; letter-spacing: 2px;
+  overflow-x: hidden; overflow-y: hidden; margin: 0px;}
+  
+  
+body {
+	background: #000;
+	color: #fff;
+	text-align: center;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20pt;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
+
+}
+	
+video {height: 99%; width: 100%;}
+	
+#topBar {height: 14%; color: #7F7F7F; padding-top: 20px; text-spacing: 0px;}
+#content {height: 37.75%;}
+.buttonActivated{width: 19.5%; margin-left: 0.25%; margin-right: 0.25%; height: 100%; float: left;}
+#buttonDiv {height: 47.45%; width: 61.5%; margin: 1.75% 21.05% auto 17.45%;} 
+
+.button {width: 21.5%;
+margin-left: 1.75%;
+margin-right: 1.75%;
+height: 100%;
+float: left;
+font-size: 20pt;
+text-shadow: black 0.05em 0.05em 0.1em;}
+
+
+.buttonBack1 {position: relative;
+width: 100%;
+height: 59%;
+z-index: 10;
+background: inherit;
+border-radius: 15px;}
+
+.buttonBack2 {position: relative;
+width: 80%;
+height: 41%;
+z-index: 5;
+background: inherit;
+margin: auto auto auto auto;}
+
+.buttonBack3 {position: relative;
+top: -100%;
+width: 100%;
+height: 100%; 
+z-index: 1;
+background: black;}
+
+.buttonActivated .buttonBack1 {height: 68%;}
+.buttonActivated .buttonBack2 {height: 32%;}
+.buttonActivated .buttonBack3 {}
+.buttonActivated .thumbnail {height: 33%; top: 34%;}
+.buttonActivated .buttonText {top: 73%;}
+
+
+.thumbnail {position: absolute;
+width: 90%;
+height: 50%;
+margin: 5px auto 5px auto;
+background-size: cover;
+background-colour: black;
+background-position: center;
+background-repeat: repeat-x;
+left: 5%;
+right: 5%;
+top: 2%;
+border: white 2.5px solid;
+border-radius: 3%;
+box-sizing: border-box;}
+
+.buttonText {position: absolute;
+top: 60%; 
+left: 5%;
+right: 5%;}
+
+.buttonMoreText {position: absolute;
+top: 60%; 
+left: 5%;
+right: 5%;
+display: none;}
+
+
+.buttonActivated .buttonMoreText {top: 22%; display: block;}
+
+.buttonActivated {height: 128%;
+				margin-top: -12%;}
+				
+#editBox{width: 42%;
+background: white;
+color: black;
+margin: auto;
+padding: 5px;
+font-size: medium;
+letter-spacing: normal;}
+
+@charset "utf-8";
+/* Master Stylesheet for Dementia Project */
+
+html,body{
+  height:100%; width: 100%; font-family: Planar; letter-spacing: 2px;
+  overflow-x: hidden; overflow-y: hidden; margin: 0px;}
+  
+  
+body {
+	background: #000;
+	color: #fff;
+	text-align: center;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20pt;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+a {color: #CCCC00; text-decoration: none; margin: 0px;}
+
+a:hover {color: #FFFF00;}
+
+h1{color: yellow; font-weight: normal; font-size: 1.2em;}
+	
+video {height: 99%; width: 100%;}
+	
+#topBar {height: 12%; color: #ADADAD; padding-top: 2%; text-spacing: 0px;}
+#content {height: 40.75%;}
+.buttonActivated{width: 19.5%; margin-left: 0.25%; margin-right: 0.25%; height: 100%; float: left;}
+#buttonDiv {height: 47.45%; width: 60%; margin: 1.75% 0% auto 20.45%;} 
+
+.button {width: 22%;
+margin-left: 1.25%;
+margin-right: 1.25%;
+height: 100%;
+float: left;
+font-size: 24pt;
+text-shadow: black 0.05em 0.05em 0.1em;}
+
+
+.buttonBack1 {position: relative;
+width: 100%;
+height: 59%;
+z-index: 10;
+background: inherit;
+border-radius: 15px;}
+
+.buttonBack2 {position: relative;
+width: 80%;
+height: 32%;
+z-index: 5;
+background: inherit;
+margin: 18% auto auto auto;}
+
+.buttonBack3 {position: relative;
+top: -100%;
+width: 100%;
+height: 100%; 
+z-index: 1;
+background: black;}
+
+.buttonActivated .buttonBack1 {height: 68%;}
+.buttonActivated .buttonBack2 {height: 32%;}
+.buttonActivated .buttonBack3 {top: -107%;}
+.buttonActivated .thumbnail {height: 33%; top: 34%;}
+.buttonActivated .buttonText {top: 73%;}
+
+#stopButton {
+position: fixed;
+background: red;
+right: 81px;
+bottom: -62px;
+width: 155px;
+height: 155px;
+border-radius: 100%;
+z-index: 2;
+}
+
+.thumbnail {position: absolute;
+width: 90%;
+height: 50%;
+margin: 5px auto 5px auto;
+background-size: cover;
+background-colour: black;
+background-position: center;
+background-repeat: repeat-x;
+left: 5%;
+right: 5%;
+top: 2%;
+border: white 2.5px solid;
+border-radius: 3%;
+box-sizing: border-box;}
+
+.buttonText {position: absolute;
+top: 57%; 
+left: 5%;
+right: 5%;}
+
+.buttonMoreText {position: absolute;
+top: 60%; 
+left: 5%;
+right: 5%;
+display: none;}
+
+
+.buttonActivated .buttonMoreText {top: 22%; display: block;}
+
+.buttonActivated {height: 128%;
+				margin-top: -12%;}
+				
+/*#editBox{width: 42%;
+background: white;
+color: black;
+margin: auto;
+padding: 5px;
+font-size: medium;
+letter-spacing: normal;}*/
+
+table,tr,td {border: solid 1px #CCCC00;
+text-align: center;
+vertical-align: middle;
+margin-left: auto;
+margin-right: auto;
+border-collapse: collapse;
+padding: 5px 5px 5px 5px;}
+
+#autoplaySettingsBox,#editBox{
+font-size: 1em;
+color: #cccc00;
+border: solid #cccc00;
+width: 52%;
+margin: 0 auto 0 auto;
+padding: 1% 1% 1% 1%; 
+}
+
+#editBox{text-align: left;}
+
+input[type="checkbox"],input[type="radio"]{width: 70px; height: 34px;}
+input[type="file"],input[type="text"],input[type="submit"]{font-size: 1em;}
+input[type="submit"]{background-color: #cccc00;}
+
+@keyframes blinker
+{
+0% {opacity: 1;}
+50% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+@-webkit-keyframes blinker
+{
+0% {opacity: 1;}
+50% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+#stopButtonText {
+position: fixed;
+right: 23px;
+text-align: center;
+font-size: 50px;
+bottom: 141px;
+/*display: none;*/
+width: 260px;
+height: 66px;
+z-index: 3;
+color: #FFFFFF;
+text-shadow: black 0.05em 0.05em 0.1em;
+}
+
+#delButton {background-color: #FF0000;
+color: #FFFFFF;
+margin: -207px 0 0 423px;
+width: 460px;
+font-size: 30px;
+}
+
+#navButton {margin: -194px 0 0 590px;
+background-color: #CCCC00;
+width: 460px;
+font-size: 30px;
+display: block;
+}
+
+#playbackControl {
+z-index: 2;
+background: rgba(0,0,0,0.7);
+width: 100%;
+position: relative;
+height: 99%;
+margin-right: 10%;
+font-size: 50px;
+top: -99%;
+padding: 13% 0 0 0%;
+text-align: center;
+}
+
+#playbackControl {
+text-shadow: black 0.05em 0.05em 0.1em;
+}
+
+#pauseButton {
+position: fixed;
+background: #888888;
+left: 81px;
+bottom: -62px;
+width: 155px;
+height: 155px;
+border-radius: 100%;
+z-index: 2;
+}
+
+#pauseButtonText {
+position: fixed;
+left: 23px;
+text-align: center;
+font-size: 50px;
+bottom: 141px;
+/*display: none;*/
+width: 260px;
+height: 66px;
+z-index: 3;
+color: #FFFFFF;
+text-shadow: black 0.05em 0.05em 0.1em;
+}
+
+#buttonDisabler{/*display: none;*/ position: absolute; z-index: 99; bottom: 139px; left: 0; width: 100%; height: 30%; opacity: 0;}
+#altPauseButton{display: none; position: absolute; z-index: 99; bottom: 0; left: 411px; width: 58%; height: 10%; opacity: 0;}

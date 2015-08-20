@@ -1,0 +1,31 @@
+<html>
+<head>
+<link rel="stylesheet" src="../css/main.css">
+<style>
+body {font-size: 38px; color: white; font-family: Planar; background: url('user-settings.jpg') #000 center center no-repeat; background-size: cover;}
+.area, .button, .textbox {position: absolute; width: 14%; text-transform: uppercase;}
+.button {bottom: 0; height: 55%;}
+.textbox {bottom: 55%; height: 6%;}
+.button:nth-child(1), .textbox:nth-child(7) {left: 0; margin-left: 5px; text-transform: none;}
+.button:nth-child(2), .textbox:nth-child(8) {left: 20.5%;}
+.button:nth-child(3), .textbox:nth-child(9) {left: 36%;}
+.button:nth-child(4), .textbox:nth-child(10) {left: 51%;}
+.button:nth-child(5), .textbox:nth-child(11) {left: 66%;}
+.button:nth-child(6), .textbox:nth-child(12) {right: 0;}
+</style>
+</head>
+<body>
+<div id="btnUsername" class="button" onclick="window.open('addUser.php','_self');"></div>
+<div id="btnSleeptime" class="button" onclick="window.open('user_settings.php?action=sleeptime','_self');"></div>
+<div id="btnVoiceprompts" class="button" onclick="window.open('user_settings.php?action=voiceprompts','_self');"></div>
+<div id="btnTimeout" class="button" onclick="window.open('user_settings.php?action=timeout','_self');"></div>
+<div id="btnSensors" class="button" onclick="window.open('user_settings.php?action=sensors','_self');"></div>
+<div id="btnStop" class="button" onclick="window.open('/closekiosk','_self');"></div>
+<div id="username" class="textbox">Mr. Test</div>
+<div id="sleeptime" class="textbox">0800</br>1700</div>
+<div id="voiceprompts" class="textbox">Active</div>
+<div id="timeout" class="textbox">30 Min</div>
+<div id="sensors" class="textbox">Active</div>
+<div id="stopbutton" class="textbox"></div>
+</body>
+</html>
