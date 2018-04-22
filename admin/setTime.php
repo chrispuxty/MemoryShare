@@ -2,10 +2,10 @@
 if(isset($_GET['wakeHour'])&&isset($_GET['wakeMinute'])&&isset($_GET['sleepHour'])&&isset($_GET['sleepMinute'])){
 		$wakeTime = 60 * $_GET['wakeHour'] + $_GET['wakeMinute'];
 		$sleepTime = 60 * $_GET['sleepHour'] + $_GET['sleepMinute'];
-		mysql_query("UPDATE patients SET wakeTime=".$wakeTime.",sleepTime=".$sleepTime." WHERE id=".$patientID) or die(mysql_error());
+		mysqli_query($db,"UPDATE patients SET wakeTime=".$wakeTime.",sleepTime=".$sleepTime." WHERE id=".$patientID) or die(mysqli_error($db));
 		$updated = true;}
 		
-		$query = mysql_query("SELECT wakeTime,sleepTime,voicePrompts FROM patients WHERE id=".$patientID) or die(mysql_query()); $row = mysql_fetch_assoc($query);
+		$query = mysqli_query($db,"SELECT wakeTime,sleepTime,voicePrompts FROM patients WHERE id=".$patientID) or die(mysqli_query($db)); $row = mysqli_fetch_assoc($db,$query);
 		$wakeHour = floor($row['wakeTime']/60); $wakeMinute = $row['wakeTime']%60; $sleepHour = floor($row['sleepTime']/60); $sleepMinute = $row['sleepTime']%60;
 	
 ?>

@@ -16,13 +16,13 @@ if($cfgUpdateSevereMode||$cfgUpdateDisableAutoplay){
 	file_put_contents("config.php",$configFile);}
 	*/
 include "config.php"; include "functions.php";
-if (isset($_GET['severeMode'])) mysql_query("UPDATE patients SET severeMode=".((($_GET['severeMode']==="true"))?1:0)." WHERE id=".$patientID) or die(mysql_error());
-if (isset($_GET['disableAutoplay'])) mysql_query("UPDATE patients SET disableAutoplay=".((($_GET['disableAutoplay']==="true"))?1:0)." WHERE id=".$patientID) or die(mysql_error());
-$query = mysql_query("SELECT * FROM patients WHERE id=".$patientID) or die(mysql_error()); $row = mysql_fetch_assoc($query);
+if (isset($_GET['severeMode'])) mysqli_query($db,"UPDATE patients SET severeMode=".((($_GET['severeMode']==="true"))?1:0)." WHERE id=".$patientID) or die(mysqli_error($db));
+if (isset($_GET['disableAutoplay'])) mysqli_query($db,"UPDATE patients SET disableAutoplay=".((($_GET['disableAutoplay']==="true"))?1:0)." WHERE id=".$patientID) or die(mysqli_error($db));
+$query = mysqli_query($db,"SELECT * FROM patients WHERE id=".$patientID) or die(mysqli_error($db)); $row = mysqli_fetch_assoc($db,$query);
 $severeMode = (($row['severeMode']==1)?true:false); $disableAutoplay = (($row['disableAutoplay']==1)?true:false);
 
-$query = mysql_query("SELECT * FROM patients WHERE id=".$patientID) or die(mysql_error());
-$params = mysql_fetch_assoc($query);
+$query = mysqli_query($db,"SELECT * FROM patients WHERE id=".$patientID) or die(mysqli_error($db));
+$params = mysqli_fetch_assoc($db,$query);
 $wakeHour = floor($params['wakeTime']/60); $wakeMinute = $params['wakeTime'] % 60;
 $sleepHour = floor($params['sleepTime']/60); $sleepMinute = $params['sleepTime'] % 60;
 $randomAutoplayTime = $params['randomAutoPlayDelay'] * 60000;
@@ -153,7 +153,7 @@ if($path=="media"&&!isset($_GET['recurse'])&&$randomAutoplayTime!=0){echo "setIn
 <?php
 //$patientID = 24601;
 //echo "insert into observations (patient, path) values (" . $patientID . ", " . $path . "/" . $file . ")";
-mysql_query("insert into observations (patient, path) values (" . $patientID . ", '" . addslashes($path . "/" . (($autoplay)?" [AUTOPLAY] ":""). $file) ."')") or die(mysql_error());
+mysqli_query($db,"insert into observations (patient, path) values (" . $patientID . ", '" . addslashes($path . "/" . (($autoplay)?" [AUTOPLAY] ":""). $file) ."')") or die(mysqli_error($db));
 //RENDERING CODE
 //if($severeMode && strlen($file) > 0) echo "<script type='text/javascript'>setTimeout(function(){window.onclick = function(){window.open('index.php','_self');}},500);</script>";
 //if($path == "media") echo "<script type='text/javascript'>var screensaver;

@@ -1,7 +1,7 @@
 <?php
-$db = mysql_connect("127.0.0.1","kanvar","eVBLeUTKqRm8qxsQ") or die(mysql_error());
-mysql_select_db("kanvar_dementia") or die(mysql_error());
-$patientID = mysql_fetch_assoc(mysql_query("SELECT id FROM options LIMIT 1;")) or die(mysql_error());
+$db = mysqli_connect($db,"127.0.0.1","kanvar","eVBLeUTKqRm8qxsQ") or die(mysqli_error($db));
+mysqli_select_db($db,"kanvar_dementia") or die(mysqli_error($db));
+$patientID = mysqli_fetch_assoc($db,mysqli_query($db,"SELECT id FROM options LIMIT 1;")) or die(mysqli_error($db));
 $patientID = $patientID['id'];
 ?>
 

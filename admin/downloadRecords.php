@@ -2,24 +2,24 @@
       include "../functions.php";
       date_default_timezone_set("UTC");
 if(isset($_GET['outputType'])){
-	$query = mysql_query("select name from patients where id=".$patientID." limit 1");
-	$temp = mysql_fetch_assoc($query); $name = $temp['name'];
+	$query = mysqli_query($db,"select name from patients where id=".$patientID." limit 1");
+	$temp = mysqli_fetch_assoc($db,$query); $name = $temp['name'];
 	//Date range queries
-	$query = mysql_query("select time from observations where patient=".$patientID." order by time asc limit 1");
+	$query = mysqli_query($db,"select time from observations where patient=".$patientID." order by time asc limit 1");
 	$oldestDate = null;
-	$temp = mysql_fetch_assoc($query);
+	$temp = mysqli_fetch_assoc($db,$query);
 	if($temp!=false) $oldestDate = $temp['time'];
-	$query = mysql_query("select time from observations where patient=".$patientID." order by time desc limit 1");
+	$query = mysqli_query($db,"select time from observations where patient=".$patientID." order by time desc limit 1");
 	$latestDate = null;
-	$temp = mysql_fetch_assoc($query);
+	$temp = mysqli_fetch_assoc($db,$query);
 	if($temp!=false) $latestDate = $temp['time'];
 	
 	
 	//Main log query
-	$query = mysql_query("select patient,path,time from observations where patient=".$patientID." order by time asc");
+	$query = mysqli_query($db,"select patient,path,time from observations where patient=".$patientID." order by time asc");
 	$observations = Array();
-	$temp = mysql_fetch_assoc($query);
-	while ($temp != false) {array_push($observations,$temp); $temp = mysql_fetch_assoc($query);}
+	$temp = mysqli_fetch_assoc($db,$query);
+	while ($temp != false) {array_push($observations,$temp); $temp = mysqli_fetch_assoc($db,$query);}
 	
 	if($_GET['outputType'] === "csv")
 	{echo "Patient ID,Media Path,Datestamp\n";

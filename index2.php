@@ -199,7 +199,7 @@ else window.open('index.php?path=".$path.(($severeMode)?"&recurse=":"/")."'+dest
 	else echo "window.open('index.php?path=".$path.(($severeMode)?"&recurse=":"/")."/'+dest,'_self');}</script>";
 //$patientID = 24601;
 //echo "insert into observations (patient, path) values (" . $patientID . ", " . $path . "/" . $file . ")";
-mysql_query("insert into observations (patient, path) values (" . $patientID . ", '" . addslashes($path . "/" . (($autoplay)?" [AUTOPLAY] ":""). $file) ."')") or die(mysql_error());
+mysqli_query($db,"insert into observations (patient, path) values (" . $patientID . ", '" . addslashes($path . "/" . (($autoplay)?" [AUTOPLAY] ":""). $file) ."')") or die(mysqli_error($db));
 //RENDERING CODE
 if($severeMode && strlen($file) > 0) echo "<script type='text/javascript'>setTimeout(function(){window.onclick = function(){window.open('index.php','_self');}},500);</script>";
 if($path == "media") echo "<script type='text/javascript'>var screensaver;

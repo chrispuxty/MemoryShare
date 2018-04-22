@@ -1,6 +1,6 @@
 <?php include "config.php";
-$query = mysql_query("SELECT * FROM patients WHERE id=".$patientID) or die(mysql_error());
-$params = mysql_fetch_assoc($query);
+$query = mysqli_query($db,"SELECT * FROM patients WHERE id=".$patientID) or die(mysqli_error($db));
+$params = mysqli_fetch_assoc($db,$query);
 $wakeHour = floor($params['wakeTime']/60); $wakeMinute = $params['wakeTime'] % 60;
 shell_exec("DISPLAY=:0 xset dpms force off");
 ?>

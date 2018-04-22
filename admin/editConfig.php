@@ -2,16 +2,16 @@
 if(isset($_POST['submit'])&&isset($_POST['patientID'])){
 		$patientID = null;
 		if($_POST['patientID']=="New"&&isset($_POST['name'])&&strlen($_POST['name'])>0){
-			$query = mysql_query("select max(id) from patients") or die(mysql_error());
-			$temp = mysql_fetch_assoc($query);
+			$query = mysqli_query($db,"select max(id) from patients") or die(mysqli_error($db));
+			$temp = mysqli_fetch_assoc($db,$query);
 			$nextID = ((is_numeric($temp['max(id)']))?$temp['max(id)']+1:0);
-			mysql_query("INSERT INTO patients(id, name) VALUES (".$nextID.",'".mysql_real_escape_string($_POST['name'])."')") or die(mysql_error());
+			mysqli_query($db,"INSERT INTO patients(id, name) VALUES (".$nextID.",'".mysqli_real_escape_string($db,$_POST['name'])."')") or die(mysqli_error($db));
 			$patientID = $nextID;
 			}
 			else {if ($_POST['patientID']!="New") $patientID = $_POST['patientID'];
 			else $patientID = 0;}
 		
-		mysql_query("UPDATE options SET id=".$patientID) or die(mysql_query());
+		mysqli_query($db,"UPDATE options SET id=".$patientID) or die(mysqli_query($db));
 	/*	$configFile = file("../config.php",FILE_IGNORE_NEW_LINES||FILE_SKIP_EMPTY_LINES);
 		foreach($configFile as &$line)
 	if(strpos($line,"patientID") === 1) $line = "$"."patientID = ".$patientID.";\n";
@@ -19,10 +19,10 @@ if(isset($_POST['submit'])&&isset($_POST['patientID'])){
 	$updated = true;
 	}
 	
-	$query = mysql_query("select * from patients");
+	$query = mysqli_query($db,"select * from patients");
 $patients = Array();
-	$temp = mysql_fetch_assoc($query);
-	while ($temp != false) {array_push($patients,$temp); $temp = mysql_fetch_assoc($query);
+	$temp = mysqli_fetch_assoc($db,$query);
+	while ($temp != false) {array_push($patients,$temp); $temp = mysqli_fetch_assoc($db,$query);
 	$currentPatientInArray = 0;
 	for ($i = 0; $i < count($patients); $i++) if($patients[$i]['id'] == $patientID) $currentPatientInArray = $i;
 	$voicePrompts = ($patients[$currentPatientInArray]['voicePrompts']==1);

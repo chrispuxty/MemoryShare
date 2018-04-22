@@ -1,8 +1,8 @@
 <?php include "../config.php";
-$query = mysql_query("select * from patients");
+$query = mysqli_query($db,"select * from patients");
 $patients = Array();
-	$temp = mysql_fetch_assoc($query);
-	while ($temp != false) {array_push($patients,$temp); $temp = mysql_fetch_assoc($query);}
+	$temp = mysqli_fetch_assoc($db,$query);
+	while ($temp != false) {array_push($patients,$temp); $temp = mysqli_fetch_assoc($db,$query);}
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
