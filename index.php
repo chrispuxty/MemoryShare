@@ -18,11 +18,11 @@ if($cfgUpdateSevereMode||$cfgUpdateDisableAutoplay){
 include "config.php"; include "functions.php";
 if (isset($_GET['severeMode'])) mysqli_query($db,"UPDATE patients SET severeMode=".((($_GET['severeMode']==="true"))?1:0)." WHERE id=".$patientID) or die(mysqli_error($db));
 if (isset($_GET['disableAutoplay'])) mysqli_query($db,"UPDATE patients SET disableAutoplay=".((($_GET['disableAutoplay']==="true"))?1:0)." WHERE id=".$patientID) or die(mysqli_error($db));
-$query = mysqli_query($db,"SELECT * FROM patients WHERE id=".$patientID) or die(mysqli_error($db)); $row = mysqli_fetch_assoc($db,$query);
+$query = mysqli_query($db,"SELECT * FROM patients WHERE id=".$patientID) or die(mysqli_error($db)); $row = mysqli_fetch_assoc($query);
 $severeMode = (($row['severeMode']==1)?true:false); $disableAutoplay = (($row['disableAutoplay']==1)?true:false);
 
 $query = mysqli_query($db,"SELECT * FROM patients WHERE id=".$patientID) or die(mysqli_error($db));
-$params = mysqli_fetch_assoc($db,$query);
+$params = mysqli_fetch_assoc($query);
 $wakeHour = floor($params['wakeTime']/60); $wakeMinute = $params['wakeTime'] % 60;
 $sleepHour = floor($params['sleepTime']/60); $sleepMinute = $params['sleepTime'] % 60;
 $randomAutoplayTime = $params['randomAutoPlayDelay'] * 60000;

@@ -4,19 +4,19 @@ if(isset($_GET['outputType'])){
 	//Date range queries
 	$query = mysqli_query($db,"select time from observations where patient=".$patientID." order by time asc limit 1");
 	$oldestDate = null;
-	$temp = mysqli_fetch_assoc($db,$query);
+	$temp = mysqli_fetch_assoc($query);
 	if($temp!=false) $oldestDate = $temp['time'];
 	$query = mysqli_query($db,"select time from observations where patient=".$patientID." order by time desc limit 1");
 	$latestDate = null;
-	$temp = mysqli_fetch_assoc($db,$query);
+	$temp = mysqli_fetch_assoc($query);
 	if($temp!=false) $latestDate = $temp['time'];
 	
 	
 	//Main log query
 	$query = mysqli_query($db,"select patient,path,time from observations where patient=".$patientID." order by time asc");
 	$observations = Array();
-	$temp = mysqli_fetch_assoc($db,$query);
-	while ($temp != false) {array_push($observations,$temp); $temp = mysqli_fetch_assoc($db,$query);}
+	$temp = mysqli_fetch_assoc($query);
+	while ($temp != false) {array_push($observations,$temp); $temp = mysqli_fetch_assoc($query);}
 	
 	if($_GET['outputType'] === "csv")
 	{echo "Patient ID,Media Path,Datestamp\n";

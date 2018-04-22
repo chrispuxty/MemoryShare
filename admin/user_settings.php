@@ -2,7 +2,7 @@
 
 $randomAutoplayOptions = [0,15,30,45];
 
-$query = mysqli_query($db,"SELECT * FROM patients WHERE id=".$patientID) or die(mysqli_error($db)); $row = mysqli_fetch_assoc($db,$query);
+$query = mysqli_query($db,"SELECT * FROM patients WHERE id=".$patientID) or die(mysqli_error($db)); $row = mysqli_fetch_assoc($query);
 
 
 if(isset($_GET['action'])) {
@@ -13,7 +13,7 @@ mysqli_query($db,"UPDATE patients SET randomAutoPlayDelay=".$randomAutoplayOptio
 elseif ($_GET['action']=="voiceprompts") {mysqli_query($db,"UPDATE patients SET voicePrompts=".(($row['voicePrompts']==1)?0:1)." where id=".$patientID) or die(mysqli_error($db));}
 elseif ($_GET['action']=="sensors") {mysqli_query($db,"UPDATE patients SET motionAndAudioSensing=".(($row['motionAndAudioSensing']==1)?0:1)." where id=".$patientID) or die(mysqli_error($db));}
 
-$query = mysqli_query($db,"SELECT * FROM patients WHERE id=".$patientID) or die(mysqli_error($db)); $row = mysqli_fetch_assoc($db,$query);
+$query = mysqli_query($db,"SELECT * FROM patients WHERE id=".$patientID) or die(mysqli_error($db)); $row = mysqli_fetch_assoc($query);
 }
 ?>
 <html>

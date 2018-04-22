@@ -3,7 +3,7 @@ if(isset($_POST['submit'])&&isset($_POST['patientID'])){
 		$patientID = null;
 		if($_POST['patientID']=="New"&&isset($_POST['name'])&&strlen($_POST['name'])>0){
 			$query = mysqli_query($db,"select max(id) from patients") or die(mysqli_error($db));
-			$temp = mysqli_fetch_assoc($db,$query);
+			$temp = mysqli_fetch_assoc($query);
 			$nextID = ((is_numeric($temp['max(id)']))?$temp['max(id)']+1:0);
 			mysqli_query($db,"INSERT INTO patients(id, name) VALUES (".$nextID.",'".mysqli_real_escape_string($db,$_POST['name'])."')") or die(mysqli_error($db));
 			$patientID = $nextID;
@@ -21,8 +21,8 @@ if(isset($_POST['submit'])&&isset($_POST['patientID'])){
 	
 	$query = mysqli_query($db,"select * from patients");
 $patients = Array();
-	$temp = mysqli_fetch_assoc($db,$query);
-	while ($temp != false) {array_push($patients,$temp); $temp = mysqli_fetch_assoc($db,$query);
+	$temp = mysqli_fetch_assoc($query);
+	while ($temp != false) {array_push($patients,$temp); $temp = mysqli_fetch_assoc($query);
 	$currentPatientInArray = 0;
 	for ($i = 0; $i < count($patients); $i++) if($patients[$i]['id'] == $patientID) $currentPatientInArray = $i;
 	$voicePrompts = ($patients[$currentPatientInArray]['voicePrompts']==1);

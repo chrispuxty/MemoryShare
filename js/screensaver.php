@@ -1,6 +1,6 @@
 <?php include "../config.php";
 $query = mysqli_query($db,"SELECT * FROM patients WHERE id=".$patientID) or die(mysqli_error($db));
-$params = mysqli_fetch_assoc($db,$query);
+$params = mysqli_fetch_assoc($query);
 $wakeHour = floor($params['wakeTime']/60); $wakeMinute = $params['wakeTime'] % 60;
 $sleepHour = floor($params['sleepTime']/60); $sleepMinute = $params['sleepTime'] % 60;
 

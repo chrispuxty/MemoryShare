@@ -5,7 +5,7 @@ if(isset($_GET['wakeHour'])&&isset($_GET['wakeMinute'])&&isset($_GET['sleepHour'
 		mysqli_query($db,"UPDATE patients SET wakeTime=".$wakeTime.",sleepTime=".$sleepTime." WHERE id=".$patientID) or die(mysqli_error($db));
 		$updated = true;}
 		
-		$query = mysqli_query($db,"SELECT wakeTime,sleepTime,voicePrompts FROM patients WHERE id=".$patientID) or die(mysqli_query($db)); $row = mysqli_fetch_assoc($db,$query);
+		$query = mysqli_query($db,"SELECT wakeTime,sleepTime,voicePrompts FROM patients WHERE id=".$patientID) or die(mysqli_query($db)); $row = mysqli_fetch_assoc($query);
 		$wakeHour = floor($row['wakeTime']/60); $wakeMinute = $row['wakeTime']%60; $sleepHour = floor($row['sleepTime']/60); $sleepMinute = $row['sleepTime']%60;
 	
 ?>
