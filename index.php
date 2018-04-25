@@ -167,8 +167,8 @@ mysqli_query($db,"insert into observations (patient, path) values (" . $patientI
 
 $enablePopup = false;
 $thumbs = getThumbs($path);
- if ($path == "media" && $file == ""){echo '<style type="text/css">body {font-size: 30pt; letter-spacing: 2px;}
-.button {font-size: 30pt;}
+ if ($path == "media" && $file == ""){echo '<style type="text/css">body {font-size: 24pt; letter-spacing: 2px;}
+.button {font-size: 24pt;}
 </style>';
 echo '</head> <body>';
 echo '<div id="topBar"><span id="date_time"></span><script type="text/javascript">date_time("date_time");</script>';
