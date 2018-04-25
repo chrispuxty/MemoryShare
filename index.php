@@ -293,14 +293,16 @@ if(isset($_GET['mediaOffset'])) {$mediaOffset = $_GET['mediaOffset'];
 if($mediaOffset >= $mediaCount) $mediaOffset = 0;}
 
 if ($mediaCount > 0)
-for ($i = $mediaOffset; (($i < $mediaCount) && (($mediaCount == 4)?(true):($i < $mediaOffset + 3))); $i++) {echo '<div class="button'.((!$severeMode&&strpos($path."/".$file,$media[$i])!==false&&$enablePopup)?" buttonActivated":"").'" style="background: '.$colours[$colourCount].';" onclick="navigate(\''.((isset($_GET['recurse']))?$_GET['recurse']."/":"").$media[$i].'&mediaOffset='.$mediaOffset.'\');"><div class="buttonBack1"><div class="thumbnail" style="'.(($path != "media"||isset($_GET['recurse']))?"background-repeat: repeat; ":"").'background-colour: '.$colours[$colourCount++].'; background-image: url(\''.$path."/".((isset($_GET['recurse']))?$_GET['recurse']."/":"").$thumbs[$i].'\');'.(($path == "media"&&!isset($_GET['recurse']))?" border: none; width: 70%; background-size: contain; top: 6%;":"").'"></div>'.((strpos($file,'/') !== false && !isset($_GET['recurse']))?"<span class='buttonMoreText'>(More)</span>":"").'<span class="buttonText"'.(($path == "media"&&!isset($_GET['recurse']))?" style='top: 53%;'":"").'>'.trimExt($media[$i],false).'</span></div><div class="buttonBack2"></div><div class="buttonBack3"></div></div>';
+for ($i = $mediaOffset; (($i < $mediaCount) && (($mediaCount == 4)?(true):($i < $mediaOffset + 3))); $i++) {echo '<div class="button'.((!$severeMode&&strpos($path."/".$file,$media[$i])!==false&&$enablePopup)?" buttonActivated":"").'" style="background: '.$colours[$colourCount].';" onclick="navigate(\''.((isset($_GET['recurse']))?$_GET['recurse']."/":"").$media[$i].'&mediaOffset='.$mediaOffset.'\');"><div class="buttonBack1"><div class="thumbnail" style="'.(($path != "media"||isset($_GET['recurse']))?"background-repeat: repeat; ":"").'background-colour: '.$colours[$colourCount++].'; background-image: url(\''.$path."/".((isset($_GET['recurse']))?$_GET['recurse']."/":"").$thumbs[$i].'\');'.(($path == "media"&&!isset($_GET['recurse']))?" border: none; width: 70%; background-size: contain; top: 6%;":"").'"></div>'.((strpos($file,'/') !== false && !isset($_GET['recurse']))?"<span class='buttonMoreText'>(More)</span>":"").'<span class="buttonText"'.(($path == "media"&&!isset($_GET['recurse']))?" style='top: 53%;'":"").'>'
+	.($path == "media" ? "My<br/>":"") //Adds 'My' to front
+	.trimExt($media[$i],false).'</span></div><div class="buttonBack2"></div><div class="buttonBack3"></div></div>';
 }
 $moreButton = "";
 $tempPathString = $path.((isset($_GET['recurse']))?$_GET['recurse']:"");
 if (strpos($tempPathString,"Music") > 0) $moreButton = "./admin/more/Music.png";
-if (strpos($tempPathString,"Old Movies") > 0) $moreButton = "./admin/more/Old Movies.png";
+if (strpos($tempPathString,"Movies") > 0) $moreButton = "./admin/more/Old Movies.png";
 if (strpos($tempPathString,"Photos") > 0) $moreButton = "./admin/more/Photos.png";
-if (strpos($tempPathString,"Family Messages") > 0) $moreButton = "./admin/more/Family Messages.png";
+if (strpos($tempPathString,"Family") > 0) $moreButton = "./admin/more/Family Messages.png";
 
 if($mediaCount > 4) echo '<div class="button" style="background: '.$colours[$colourCount].';" onclick="window.open(\'index.php?path='.$path.((isset($_GET['recurse']))?$_GET['recurse']:"").'&mediaOffset='.($mediaOffset+3).'\',\'_self\');"><div class="buttonBack1"><div class="thumbnail" style="border: none; background-colour: '.$colours[$colourCount++].'; background-image: url(\''.$moreButton.'\');"></div><span class="buttonText">More</br>'.array_pop(explode("/",$path)).'</span></div><div class="buttonBack2"></div><div class="buttonBack3"></div></div>';
 
