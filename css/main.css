@@ -6,8 +6,13 @@
     src: url('Planer_Reg.ttf');
 }
 
+@font-face {
+    font-family: HelveticaNeue;
+    src: url('HelveticaNeueLTStd-Lt.otf');
+}
+
 html,body{
-  height:100%; width: 100%; font-family: Planar; letter-spacing: 2px;
+  height:100%; width: 100%; font-family: HelveticaNeue; letter-spacing: 2px;
   overflow-x: hidden; overflow-y: hidden; margin: 0px;}
   
   
