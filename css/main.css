@@ -12,7 +12,7 @@ html,body{
   
   
 body {
-	background: #000 url('wallpaper.jpg');
+	background: #000 /*url('wallpaper.jpg')*/;
 	background-size: cover;
 	color: #fff;
 	text-align: center;
