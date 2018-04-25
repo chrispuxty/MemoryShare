@@ -36,7 +36,7 @@ h1{color: yellow; font-weight: normal; font-size: 1.2em;}
 	
 video {height: 99%; width: 100%;}
 	
-#topBar {height: 10%; color: #B7B7B7; padding-top: 4%; text-spacing: 0px;}
+#topBar {height: 10%; color: #B7B7B7; padding-top: 3%; text-spacing: 0px;}
 #content {height: 40.75%;}
 .buttonActivated{width: 19.5%; margin-left: 0.25%; margin-right: 0.25%; height: 100%; float: left;}
 #buttonDiv {height: 47.45%; width: 60%; margin: 1.75% 0% auto 20.45%;} 
