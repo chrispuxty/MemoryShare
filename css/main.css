@@ -36,7 +36,7 @@ h1{color: yellow; font-weight: normal; font-size: 1.2em;}
 	
 video {height: 99%; width: 100%;}
 	
-#topBar {height: 12%; color: #ADADAD; padding-top: 2%; text-spacing: 0px;}
+#topBar {height: 10%; color: #B7B7B7; padding-top: 4%; text-spacing: 0px;}
 #content {height: 40.75%;}
 .buttonActivated{width: 19.5%; margin-left: 0.25%; margin-right: 0.25%; height: 100%; float: left;}
 #buttonDiv {height: 47.45%; width: 60%; margin: 1.75% 0% auto 20.45%;} 
@@ -51,10 +51,10 @@ text-shadow: black 0.05em 0.05em 0.1em;
   background: none !important;
 }
 
-#buttonDiv div:nth-child(1) .buttonBack1, #buttonDiv div:nth-child(1) .buttonBack2 {background: rgb(236, 0, 139);}
-#buttonDiv div:nth-child(2) .buttonBack1, #buttonDiv div:nth-child(2) .buttonBack2 {background: rgb(27, 117, 187);}
-#buttonDiv div:nth-child(3) .buttonBack1, #buttonDiv div:nth-child(3) .buttonBack2 {background: rgb(241, 101, 33);}
-#buttonDiv div:nth-child(4) .buttonBack1, #buttonDiv div:nth-child(4) .buttonBack2 {background: rgb(56, 180, 73);}
+#buttonDiv div:nth-child(1) .buttonBack1, #buttonDiv div:nth-child(1) .buttonBack2 {background: #29AAE1;}
+#buttonDiv div:nth-child(2) .buttonBack1, #buttonDiv div:nth-child(2) .buttonBack2 {background: #F6893E;}
+#buttonDiv div:nth-child(3) .buttonBack1, #buttonDiv div:nth-child(3) .buttonBack2 {background: #5FBC5E;}
+#buttonDiv div:nth-child(4) .buttonBack1, #buttonDiv div:nth-child(4) .buttonBack2 {background: #DC559F;}
 
 .buttonBack1 {position: relative;
 width: 100%;
@@ -87,7 +87,7 @@ background: black;
 
 #stopButton {
 position: fixed;
-background: red;
+background: #FFFFFF;
 right: 81px;
 bottom: -14px;
 width: 155px;
@@ -226,7 +226,7 @@ text-shadow: black 0.05em 0.05em 0.1em;
 
 #pauseButton {
 position: fixed;
-background: #888888;
+background: #FFFFFF;
 left: 81px;
 bottom: -14px;
 width: 155px;
