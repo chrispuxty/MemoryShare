@@ -35,7 +35,7 @@ function enableFullScreen(){
 	$('#buttonDiv').css('display','none');
 	$('#player').css('max-width','100%');
 	$('#playbackControl').css('display','none');
-	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "PAUSE";
+	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "Pause";
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = disableFullScreen;
 	$('#buttonDisabler').css('display','none');
 	$('#altPauseButton').css('display','block');
@@ -56,7 +56,7 @@ function disableFullScreen(){
 	$('#playbackControl').css('display','block');
 	$('#altPauseButton').css('display','none');
 	$('#buttonDisabler').css('display','block');
-	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "PLAY";
+	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "Play";
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = enableFullScreen;
 	if (player != undefined) player.pause();
 	//clearInterval(window.timer);

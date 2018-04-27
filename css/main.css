@@ -12,25 +12,25 @@
 }
 
 html,body{
-  height:100%; width: 100%; font-family: HelveticaNeue; letter-spacing: 2px;
-  overflow-x: hidden; overflow-y: hidden; margin: 0px;}
-  
-  
+    height:100%; width: 100%; font-family: HelveticaNeue; letter-spacing: 2px;
+    overflow-x: hidden; overflow-y: hidden; margin: 0px;}
+
+
 body {
-	background: #000 /*url('wallpaper.jpg')*/;
-	background-size: cover;
-	color: #fff;
-	text-align: center;
-	width: auto;
-	margin-left: auto;
-	margin-right: auto;
-	font-size: 20pt;
--webkit-touch-callout: none;
--webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
+    background: #000 /*url('wallpaper.jpg')*/;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20pt;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 a {color: #CCCC00; text-decoration: none; margin: 0px;}
@@ -38,22 +38,22 @@ a {color: #CCCC00; text-decoration: none; margin: 0px;}
 a:hover {color: #FFFF00;}
 
 h1{color: yellow; font-weight: normal; font-size: 1.2em;}
-	
+
 video {height: 99%; width: 100%;}
-	
+
 #topBar {height: 10%; color: #B7B7B7; padding-top: 3%; text-spacing: 0px;}
 #content {height: 40.75%;}
 .buttonActivated{width: 19.5%; margin-left: 0.25%; margin-right: 0.25%; height: 100%; float: left;}
-#buttonDiv {height: 47.45%; width: 60%; margin: 1.75% 0% auto 20.45%;} 
+#buttonDiv {height: 47.45%; width: 60%; margin: 1.75% 0% auto 20.45%;}
 
 .button {width: 22%;
-margin-left: 1.25%;
-margin-right: 1.25%;
-height: 100%;
-float: left;
-font-size: 24pt;
-text-shadow: black 0.05em 0.05em 0.1em;
-  background: none !important;
+    margin-left: 1.25%;
+    margin-right: 1.25%;
+    height: 100%;
+    float: left;
+    font-size: 24pt;
+    text-shadow: black 0.05em 0.05em 0.1em;
+    background: none !important;
 }
 
 #buttonDiv div:nth-child(1) .buttonBack1, #buttonDiv div:nth-child(1) .buttonBack2 {background: #29AAE1;}
@@ -62,26 +62,26 @@ text-shadow: black 0.05em 0.05em 0.1em;
 #buttonDiv div:nth-child(4) .buttonBack1, #buttonDiv div:nth-child(4) .buttonBack2 {background: #DC559F;}
 
 .buttonBack1 {position: relative;
-width: 100%;
-height: 59%;
-z-index: 10;
-background: inherit;
-border-radius: 15px;}
+    width: 100%;
+    height: 59%;
+    z-index: 10;
+    background: inherit;
+    border-radius: 15px;}
 
 .buttonBack2 {position: relative;
-width: 80%;
-height: 32%;
-z-index: 5;
-background: inherit;
-margin: 4% auto auto auto;}
+    width: 80%;
+    height: 32%;
+    z-index: 5;
+    background: inherit;
+    margin: 4% auto auto auto;}
 
 .buttonBack3 {position: relative;
-top: -100%;
-width: 100%;
-height: 100%; 
-z-index: 1;
-background: black;
-  display: none;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: black;
+    display: none;
 }
 
 .buttonActivated .buttonBack1 {height: 68%;}
@@ -90,49 +90,40 @@ background: black;
 .buttonActivated .thumbnail {height: 33%; top: 34%;}
 .buttonActivated .buttonText {top: 73%;}
 
-#stopButton {
-position: fixed;
-background: #FFFFFF;
-right: 81px;
-bottom: -14px;
-width: 155px;
-height: 155px;
-border-radius: 100%;
-z-index: 2;
-}
+#stopButton {position: fixed;background: #B7B7B7; right: 81px;bottom: 72px;width: 140px;height: 140px;border-radius: 37%;z-index: 2;}
 
 .thumbnail {position: absolute;
-width: 90%;
-height: 50%;
-margin: 5px auto 5px auto;
-background-size: cover;
-background-colour: black;
-background-position: center;
-background-repeat: no-repeat;/*repeat-x;*/
-left: 5%;
-right: 5%;
-top: 2%;
-border: white 2.5px solid;
-border-radius: 3%;
-box-sizing: border-box;}
+    width: 90%;
+    height: 50%;
+    margin: 5px auto 5px auto;
+    background-size: cover;
+    background-colour: black;
+    background-position: center;
+    background-repeat: no-repeat;/*repeat-x;*/
+    left: 5%;
+    right: 5%;
+    top: 2%;
+    border: white 2.5px solid;
+    border-radius: 3%;
+    box-sizing: border-box;}
 
 .buttonText {position: absolute;
-top: 57%; 
-left: 5%;
-right: 5%;}
+    top: 57%;
+    left: 5%;
+    right: 5%;}
 
 .buttonMoreText {position: absolute;
-top: 60%; 
-left: 5%;
-right: 5%;
-display: none;}
+    top: 60%;
+    left: 5%;
+    right: 5%;
+    display: none;}
 
 
 .buttonActivated .buttonMoreText {top: 22%; display: block;}
 
 .buttonActivated {height: 128%;
-				margin-top: -12%;}
-				
+    margin-top: -12%;}
+
 /*#editBox{width: 42%;
 background: white;
 color: black;
@@ -142,20 +133,20 @@ font-size: medium;
 letter-spacing: normal;}*/
 
 table,tr,td {border: solid 1px #FFFFFF;
-text-align: center;
-vertical-align: middle;
-margin-left: auto;
-margin-right: auto;
-border-collapse: collapse;
-padding: 5px 5px 5px 5px;}
+    text-align: center;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    padding: 5px 5px 5px 5px;}
 
 #autoplaySettingsBox,#editBox,#alterationBox{
-font-size: 1em;
-color: #cccc00;
-border: solid #cccc00;
-width: 52%;
-margin: 0 auto 0 auto;
-padding: 1% 1% 1% 1%; 
+    font-size: 1em;
+    color: #cccc00;
+    border: solid #cccc00;
+    width: 52%;
+    margin: 0 auto 0 auto;
+    padding: 1% 1% 1% 1%;
 }
 
 #editBox,#alterationBox{text-align: left;}
@@ -166,162 +157,150 @@ input[type="submit"]{background-color: #cccc00;}
 
 @keyframes blinker
 {
-0% {opacity: 1;}
-50% {opacity: 0;}
-100% {opacity: 1;}
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 @-webkit-keyframes blinker
 {
-0% {opacity: 1;}
-50% {opacity: 0;}
-100% {opacity: 1;}
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
-#stopButtonText {
-position: fixed;
-right: 23px;
-text-align: center;
-font-size: 50px;
-bottom: 166px;
-/*display: none;*/
-width: 260px;
-height: 66px;
-z-index: 3;
-color: #FFFFFF;
-text-shadow: black 0.05em 0.05em 0.1em;
-}
+#stopButtonText {position: fixed;right: 23px;text-align: center;font-size: 50px;bottom: 0;/*display: none;*/width: 260px;height: 66px;z-index: 3;color: #FFFFFF;text-shadow: black 0.05em 0.05em 0.1em;}
 
 #delButton {background-color: #FF0000;
-color: #FFFFFF;
-margin: -217px 0 0 320px;
-width: 353px;
-font-size: 30px;
-font-family: Planar;
-border-radius: 42px;
-border: none;
+    color: #FFFFFF;
+    margin: -217px 0 0 320px;
+    width: 353px;
+    font-size: 30px;
+    font-family: Planar;
+    border-radius: 42px;
+    border: none;
 }
 
 #navButton {margin: -204px 0 0 607px;
-background-color: #CCCC00;
-width: 363px;
-font-size: 30px;
-display: block;
-font-family: Planar;
-border-radius: 42px;
-border: none;
+    background-color: #CCCC00;
+    width: 363px;
+    font-size: 30px;
+    display: block;
+    font-family: Planar;
+    border-radius: 42px;
+    border: none;
 }
 
 #playbackControl {
-z-index: 2;
-background: rgba(0,0,0,0.7);
-width: 100%;
-position: relative;
-height: 99%;
-margin-right: 10%;
-font-size: 50px;
-top: -99%;
-padding: 13% 0 0 0%;
-text-align: center;
+    z-index: 2;
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    position: relative;
+    height: 99%;
+    margin-right: 10%;
+    font-size: 50px;
+    top: -99%;
+    padding: 13% 0 0 0%;
+    text-align: center;
 }
 
 #playbackControl {
-text-shadow: black 0.05em 0.05em 0.1em;
+    text-shadow: black 0.05em 0.05em 0.1em;
 }
 
 #pauseButton {
-position: fixed;
-background: #FFFFFF;
-left: 81px;
-bottom: -14px;
-width: 155px;
-height: 155px;
-border-radius: 100%;
-z-index: 2;
+    position: fixed;
+    background: #B7B7B7;
+    left: 81px;
+    bottom: 72px;
+    width: 140px;
+    height: 140px;
+    border-radius: 37%;
+    z-index: 2;
 }
 
 #pauseButtonText {
-position: fixed;
-left: 23px;
-text-align: center;
-font-size: 50px;
-bottom: 166px;
-/*display: none;*/
-width: 260px;
-height: 66px;
-z-index: 3;
-color: #FFFFFF;
-text-shadow: black 0.05em 0.05em 0.1em;
+    position: fixed;
+    left: 23px;
+    text-align: center;
+    font-size: 50px;
+    bottom: 166px;
+    /*display: none;*/
+    width: 260px;
+    height: 66px;
+    z-index: 3;
+    color: #FFFFFF;
+    text-shadow: black 0.05em 0.05em 0.1em;
 }
 
 #buttonDisabler{
-display: none;
-position: absolute;
-z-index: 99;
-bottom: 139px;
-left: 0;
-width: 100%;
-height: 43%;
-opacity: 0;
+    display: none;
+    position: absolute;
+    z-index: 99;
+    bottom: 139px;
+    left: 0;
+    width: 100%;
+    height: 43%;
+    opacity: 0;
 }
 
 #altPauseButton{
-display: none;
-position: absolute;
-z-index: 99;
-bottom: 0;
-left: 411px;
-width: 58%;
-height: 10%;
-opacity: 0;}
+    display: none;
+    position: absolute;
+    z-index: 99;
+    bottom: 0;
+    left: 411px;
+    width: 58%;
+    height: 10%;
+    opacity: 0;}
 
 #pauseButtonReturner {
-display: none;
-position: fixed;
-opacity: 0;
-left: 81px;
-bottom: -62px;
-width: 155px;
-height: 155px;
-border-radius: 100%;
-z-index: 2;
+    display: none;
+    position: fixed;
+    opacity: 0;
+    left: 81px;
+    bottom: -62px;
+    width: 155px;
+    height: 155px;
+    border-radius: 100%;
+    z-index: 2;
 }
 
 #cancelButton{
-  background-color: #FF0000;
-  color: #FFFFFF;
-  font-size: 1em;
-  position: absolute;
-  top: 25px;
-  right: 51px;
-  border: none;
-  border-radius: 42px;
-  height: 35px;
-  padding: 0px;
-  width: 35px;
-  
+    background-color: #FF0000;
+    color: #FFFFFF;
+    font-size: 1em;
+    position: absolute;
+    top: 25px;
+    right: 51px;
+    border: none;
+    border-radius: 42px;
+    height: 35px;
+    padding: 0px;
+    width: 35px;
+
 }
 
 #resultsTable::-webkit-scrollbar {
     width: 25px;
 }
- 
+
 #resultsTable::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.5);
     background: rgba(255,255,255,0.00);
     border-radius: 30px;
 }
- 
+
 #resultsTable::-webkit-scrollbar-thumb {
-  background-color: #CCCCCC;
-  /*-webkit-box-shadow: inset 0 0 6px rgba(255,255,255,1);*/
-  border-radius: 30px;
-  height: 60px;
-  width: 60px;
+    background-color: #CCCCCC;
+    /*-webkit-box-shadow: inset 0 0 6px rgba(255,255,255,1);*/
+    border-radius: 30px;
+    height: 60px;
+    width: 60px;
 }
 
 div.#virtualKeyboardChromeExtension {
-  bottom: 220px !important;
-  background: none !important;
-  
+    bottom: 220px !important;
+    background: none !important;
+
 }
