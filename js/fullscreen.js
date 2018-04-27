@@ -56,7 +56,7 @@ function disableFullScreen(){
 	$('#playbackControl').css('display','block');
 	$('#altPauseButton').css('display','none');
 	$('#buttonDisabler').css('display','block');
-    $('.blink').css('animation','blinker 2s ease 0 infinite alternate forwards running');
+    $('.blink').css('animation','blinker 2s ease infinite alternate');
 	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "<img class=\"button-icon\" src=\"Play.png\"><br/>Play";
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = enableFullScreen;
 	if (player != undefined) player.pause();
