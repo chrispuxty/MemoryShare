@@ -1,7 +1,7 @@
 // Content Fullscreener - mod for severe dementia patients
 var timer;
 var transitionTime = 0;
-var slideShowAdvanceTime = 10000;
+var slideShowAdvanceTime = 15000;
 var forceFullscreen = false;
 var originalButtonDiv = $('#buttonDiv').css('display');
 if(!forceFullscreen) window.onload = function(){//window.onmousemove = function(){disableFullScreen();}

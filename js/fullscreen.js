@@ -1,7 +1,7 @@
 // Content Fullscreener
 var timer;
-var transitionTime = 10000;
-var slideShowAdvanceTime = 10000;
+var transitionTime = 15000;
+var slideShowAdvanceTime = 15000;
 //var forceFullscreen = false;
 var originalButtonDiv = $('#buttonDiv').css('display');
 var originalContentHeight = $('#content').css('height');
