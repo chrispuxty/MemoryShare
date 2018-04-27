@@ -40,7 +40,7 @@ function enableFullScreen(){
 	$('#buttonDisabler').css('display','none');
 	$('#altPauseButton').css('display','block');
 	if (player != undefined) player.play();
-	//$('#stopButton').css('animation','blinker 4s infinite');
+	$('.blink').css('animation-play-state','running');
 	//$('#stopButton').css('-webkit-animation','blinker 4s infinite');
 	}
 
@@ -56,6 +56,7 @@ function disableFullScreen(){
 	$('#playbackControl').css('display','block');
 	$('#altPauseButton').css('display','none');
 	$('#buttonDisabler').css('display','block');
+    $('.blink').css('animation-play-state','paused');
 	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "<img class=\"button-icon\" src=\"Play.png\"><br/>Play";
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = enableFullScreen;
 	if (player != undefined) player.pause();

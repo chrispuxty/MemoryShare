@@ -316,3 +316,4 @@ div.#virtualKeyboardChromeExtension {
 
 .button-icon {max-width: 100px;}
 .path-text {color: #b7b7b7; font-size: 28pt;}
+.blink {animation: blinker 2s ease 0 infinite alternate forwards running;}

@@ -202,7 +202,7 @@ echo "<video id='player' autoplay poster='loading.gif' name='media'><source src=
 <div id='playbackControl' style='display: none;'><span id='playbackControlText'>Press Play to continue</br>your ".((strpos($path,"Old Movies") > 0)?"movie":"message")."</span></div>
 ".((!$severeMode
 //||!isset($_GET['recurse'])
-)?"<div id='pauseButton' onclick='disableFullScreen();'></div><div id='pauseButtonText'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
+)?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
 <script type='text/javascript' src='".
 (($severeMode)?"js/fullscreenSevere.js":"js/fullscreen.js")."'></script>";
 //preloadRecurse("media/Videos");
