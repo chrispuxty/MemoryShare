@@ -311,7 +311,7 @@ if($mediaCount > 4) echo '<div class="button" style="background: '.$colours[$col
 //echo ($path != "media");) echo '<div class="button" onclick="window.open(\'index.php\',\'_self\');">Stop</div>';
 
 echo '</div>';}
-if ($file != "" || $path !="media") echo '<div id="stopButtonText" >'.(($file != "")?'STOP':'BACK').'</div>
+if ($file != "" || $path !="media") echo '<div id="stopButtonText" >'.((true||$file != "")?'STOP':'BACK').'</div>
 <div id="stopButton" onclick="window.open(\'index.php\',\'_self\');"></div>';
 echo '<div id="buttonDisabler"></div><div id="altPauseButton" onclick="'.(($severeMode)?"window.open('index.php','_self');":"toggleFullScreen();").'" style="'.(($file != ""&&$severeMode)?"display: block;":"").'"></div>';
 echo '<div id="pauseButtonReturner" onclick="window.open(\'index.php\',\'_self\');" style="'.(($file != "" && $severeMode
