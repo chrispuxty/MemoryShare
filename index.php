@@ -72,16 +72,16 @@ function randomAutoplay(){<?php $tempArray = getMedia("media"); shuffle($tempArr
 <script type="text/javascript">//window.unload = alert("unload fired");
 <?php
 echo "function autoplayAnimation() {";
-if($path=="media"	) echo '$(".button:eq(0)").delay(7126).animate({opacity: 0},250,function(){$(".button:eq(0)").animate({opacity: 1},250);});
-$(".button:eq(1)").delay(9999).animate({opacity: 0},250,function(){$(".button:eq(1)").animate({opacity: 1},250);});
-$(".button:eq(2)").delay(12949).animate({opacity: 0},250,function(){$(".button:eq(2)").animate({opacity: 1},250);});
-$(".button:eq(3)").delay(15401).animate({opacity: 0},250,function(){$(".button:eq(3)").animate({opacity: 1},250);});
+if($path=="media"	) echo '$(".button:eq(0)").delay(7087).animate({opacity: 0},250,function(){$(".button:eq(0)").animate({opacity: 1},250);});
+$(".button:eq(1)").delay(11117).animate({opacity: 0},250,function(){$(".button:eq(1)").animate({opacity: 1},250);});
+$(".button:eq(2)").delay(14673).animate({opacity: 0},250,function(){$(".button:eq(2)").animate({opacity: 1},250);});
+$(".button:eq(3)").delay(17508).animate({opacity: 0},250,function(){$(".button:eq(3)").animate({opacity: 1},250);});
 var x = setTimeout(function(){
-$(".button:eq(0)").delay(7126).animate({opacity: 0},250,function(){$(".button:eq(0)").animate({opacity: 1},250);});
-$(".button:eq(1)").delay(9999).animate({opacity: 0},250,function(){$(".button:eq(1)").animate({opacity: 1},250);});
-$(".button:eq(2)").delay(12949).animate({opacity: 0},250,function(){$(".button:eq(2)").animate({opacity: 1},250);});
-$(".button:eq(3)").delay(15401).animate({opacity: 0},250,function(){$(".button:eq(3)").animate({opacity: 1},250);});
-},24000);';else echo '$(".button:eq(0)").delay(6483).animate({opacity: 0},250,function(){$(".button:eq(0)").animate({opacity: 1},250);});
+$(".button:eq(0)").delay(7087).animate({opacity: 0},250,function(){$(".button:eq(0)").animate({opacity: 1},250);});
+$(".button:eq(1)").delay(11117).animate({opacity: 0},250,function(){$(".button:eq(1)").animate({opacity: 1},250);});
+$(".button:eq(2)").delay(14673).animate({opacity: 0},250,function(){$(".button:eq(2)").animate({opacity: 1},250);});
+$(".button:eq(3)").delay(17508).animate({opacity: 0},250,function(){$(".button:eq(3)").animate({opacity: 1},250);});
+},26434);';else echo '$(".button:eq(0)").delay(6483).animate({opacity: 0},250,function(){$(".button:eq(0)").animate({opacity: 1},250);});
 $(".button:eq(1)").delay(7925).animate({opacity: 0},250,function(){$(".button:eq(1)").animate({opacity: 1},250);});
 $(".button:eq(2)").delay(9000).animate({opacity: 0},250,function(){$(".button:eq(2)").animate({opacity: 1},250);});
 $(".button:eq(3)").delay(9902).animate({opacity: 0},250,function(){$(".button:eq(3)").animate({opacity: 1},250);});
