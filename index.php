@@ -136,7 +136,7 @@ else window.open('index.php?path=".$path.(($severeMode)?"&recurse=":"/")."'+dest
 	else echo "window.open('index.php?path=".$path.(($severeMode)?"&recurse=":"/")."/'+dest,'_self');}";?>
 $(document).ready(function(){
 //alert("onload fired");
-<?php if($file == false && $path != "media") echo "setTimeout(function(){window.open('index.php','_self');},60000);";?>
+<?php if($file == false && $path != "media") echo "setTimeout(function(){window.open('index.php','_self');},30000);";?>
 triggerClick();
 <?php if(($file==false && $path!="media") || isset($_GET['timerCarry'])) 
 echo "setScreenSaver(".((isset($_GET['timerCarry']))?$_GET['timerCarry']:0).");";
