@@ -178,7 +178,7 @@ echo '</div>';} else echo '</head> <body>';
 echo '<audio id="clicker" hidden preload src="click.mp3"></audio><div id="content"';
 if ($path != "media" || $file != "") echo ' style="height: 55%; 
 margin-bottom: 0.5%;"'; echo ">";
-if($path != "media") echo '<span class="path-text">'.substr(srlen($path,5)).'</span>';
+if($path != "media") echo '<span class="path-text">'.substr(strlen($path,5)).'</span>';
 //if ($path == "media") {preloadRecurse("media/Videos"); preloadRecurse("media/Talk");}
 $extension = trimExt($file,true);
 echo ((!$inhibitAutoplay&&is_readable($path."/.autoplay.mp3")&&strlen($extension) < 1)?"<audio id='autoplayer' autoplay src='".$path."/.autoplay.mp3'></audio>":"");
