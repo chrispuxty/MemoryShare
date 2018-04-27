@@ -178,7 +178,7 @@ input[type="submit"]{background-color: #cccc00;}
     100% {opacity: 1;}
 }
 
-#stopButtonText {position: fixed;right: 23px;text-align: center;font-size: 50px;bottom: 15%;/*display: none;*/width: 260px;height: 66px;z-index: 3;color: #FFFFFF;text-shadow: black 0.05em 0.05em 0.1em;}
+#stopButtonText {position: fixed;right: 23px;text-align: center;font-size: 24pt;bottom: 15%;/*display: none;*/width: 260px;height: 66px;z-index: 3;color: #FFFFFF;text-shadow: black 0.05em 0.05em 0.1em;}
 
 #delButton {background-color: #FF0000;
     color: #FFFFFF;
@@ -232,7 +232,7 @@ border-radius: 100%;
     position: fixed;
     left: 23px;
     text-align: center;
-    font-size: 50px;
+    font-size: 24pt;
     bottom: 15%;
     /*display: none;*/
     width: 260px;
