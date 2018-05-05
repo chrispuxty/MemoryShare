@@ -186,7 +186,7 @@ if ($extension == strtolower("mp3") || $extension == strtolower("wav") || $exten
 {
 //NEW - record spinner
 echo '<div style="width: calc(90%*9/16);max-width: 100%;margin: 0 auto;"><div id="music_record" class="record_sway">
-<div id="music_thumb" class="record_thumb"></div></div>';
+<div id="music_thumb" class="record_thumb"></div></div></div>';
 $finalCol = 0;
 $records = ["Record_Blue.png","Record_Orange.png","Record_Green.png","Record_Pink.png"];
 for ($col = 0; $col < 4; $col++) if(strpos($path."/".$file,$media[$col])!==false) {$finalCol = $col; break;}
