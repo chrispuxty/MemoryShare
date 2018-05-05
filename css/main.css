@@ -374,4 +374,4 @@ div.#virtualKeyboardChromeExtension {
 }
 
 .record_thumb {animation: record_rotate 8s linear infinite; }
-.record_sway {animation: record_sway 26s linear infinite; }
+.record_sway {animation: record_sway 26s linear infinite; animation: none !important;}
