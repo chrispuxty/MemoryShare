@@ -214,7 +214,8 @@ if ($severeMode) echo "<script type='text/javascript' src='js/fullscreenSevere.j
 elseif ($extension == strtolower("avi") || $extension == strtolower("mov") || $extension == strtolower("wmv") || $extension == strtolower("mpg") || $extension == strtolower("mp4")){
 echo "<video id='player' autoplay poster='loading.gif' name='media'><source src='".$localPath.$path."/".$file."' type='video/".$extension."'>
 </video>
-<div id='playbackControl' style='display: none;'><span id='playbackControlText'>Press Play to continue</br>your ".((strpos($path,"Old Movies") > 0)?"movie":"message")."</span></div>
+<div id='playbackControl' style='display: none;'><span id='playbackControlText'>".//"Press Play to continue</br>your ".((strpos($path,"Old Movies") > 0)?"movie":"message")
+."</span></div>
 ".((!$severeMode
 //||!isset($_GET['recurse'])
 )?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
