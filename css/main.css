@@ -321,7 +321,6 @@ div.#virtualKeyboardChromeExtension {
 #music_thumb {   z-index: 10;
     border-radius: 100%;
     position: absolute;
-    background: url(file:///home/beacon515l/memory-box/media/Music/.thumbs/Elvis%20Presley.jpg) center center;
     width: calc(110%/3);
     background-size: cover;
     padding-bottom: calc(110%/3);
@@ -329,7 +328,6 @@ div.#virtualKeyboardChromeExtension {
     left: calc(95%/3);}
 #music_record {position: relative;
     z-index: 5;
-    background: url(file:///home/beacon515l/memory-box/Record_Blue.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
