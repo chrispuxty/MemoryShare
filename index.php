@@ -133,7 +133,7 @@ echo "if (destinations.indexOf(dest)!=-1) {
 else window.open('index.php?path=".$path.(($severeMode)?"&recurse=":"/")."'+dest,'_self');
 
 	}";} 
-	else echo "window.open('index.php?path=".preg_replace('#/+#','/',$path.(($severeMode)?"&recurse=":"/"))."/'+dest,'_self');}";?>
+	else echo "window.open('index.php?path=".preg_replace('#/+#','/',~$path.(($severeMode)?"&recurse=":"/"))."/'+dest,'_self');}";?>
 $(document).ready(function(){
 //alert("onload fired");
 <?php if($file == false && $path != "media") echo "setTimeout(function(){window.open('index.php','_self');},30000);";?>
@@ -177,8 +177,8 @@ echo '</div>';} else echo '</head> <body>';
 //if ($file != "") echo $path . "/" . recurseToThumb($path."/".$file);
 echo '<audio id="clicker" hidden preload src="click.mp3"></audio><div id="content"';
 if ($path != "media" || $file != "") echo ' style="height: 55%; 
-margin-bottom: 0.5%;"'; echo ">";
-if($path != "media" && $file == "") echo '<br/><br/><span class="path-text">My '.substr($path,7).'</span>';
+margin-bottom: 0.5%;"'; echo ">"; $tmpPathString = preg_replace('#/*#','',$path);
+if($path != "media" && $file == "") echo '<br/><br/><span class="path-text">My '.substr($tmpPathString,5)).'</span>';
 //if ($path == "media") {preloadRecurse("media/Videos"); preloadRecurse("media/Talk");}
 $extension = trimExt($file,true);
 echo ((!$inhibitAutoplay&&is_readable($path."/.autoplay.mp3")&&strlen($extension) < 1)?"<audio id='autoplayer' autoplay src='".$path."/.autoplay.mp3'></audio>":"");
