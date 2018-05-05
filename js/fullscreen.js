@@ -64,10 +64,10 @@ function disableFullScreen(){
 	$('.record_thumb').css('animation_play_state','paused');
     $('.blink').css('animation','blinker 4s ease infinite alternate');
 	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "<img class=\"button-icon\" src=\"Play.png\"><br/>Play";
-	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = enableFullScreen;
+	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = 'enableFullScreen(false)';
 	if (player != undefined) player.pause();
 	//clearInterval(window.timer);
-	if (window.pictures != undefined) window.timer = setTimeout(function(){enableFullScreen()},transitionTime);
+	if (window.pictures != undefined) window.timer = setTimeout(function(){enableFullScreen(true)},transitionTime);
 }
 	
 function advancePicture(){ if (window.pictures != undefined && window.pictures.length > 0) {
