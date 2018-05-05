@@ -133,7 +133,7 @@ echo "if (destinations.indexOf(dest)!=-1) {
 else window.open('index.php?path=".$path.(($severeMode)?"&recurse=":"/")."'+dest,'_self');
 
 	}";} 
-	else echo "window.open('index.php?path=".$path.(($severeMode)?"&recurse=":"/")."/'+dest,'_self');}";?>
+	else echo "window.open('index.php?path=".preg_replace('#/+#','/',$path.(($severeMode)?"&recurse=":"/"))."/'+dest,'_self');}";?>
 $(document).ready(function(){
 //alert("onload fired");
 <?php if($file == false && $path != "media") echo "setTimeout(function(){window.open('index.php','_self');},30000);";?>
