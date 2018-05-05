@@ -177,7 +177,7 @@ echo '</div>';} else echo '</head> <body>';
 //if ($file != "") echo $path . "/" . recurseToThumb($path."/".$file);
 echo '<audio id="clicker" hidden preload src="click.mp3"></audio><div id="content"';
 if ($path != "media" || $file != "") echo ' style="height: 55%; 
-margin-bottom: 0.5%;"'; echo ">"; $tmpPathString = $path; preg_replace('#/*#','',$tmpPathString);
+margin-bottom: 0.5%;"'; echo ">"; $tmpPathString = $path; preg_replace('\/','',$tmpPathString);
 if($path != "media" && $file == "") echo '<br/><br/><span class="path-text">My '.substr($tmpPathString,5).'</span>';
 //if ($path == "media") {preloadRecurse("media/Videos"); preloadRecurse("media/Talk");}
 $extension = trimExt($file,true);
