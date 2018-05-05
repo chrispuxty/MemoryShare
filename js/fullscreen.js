@@ -52,7 +52,7 @@ function enableFullScreen(noPlayPause = false){
 function disableFullScreen(){
 	$('#content').css('min-height','0%');
 	$('#content').css('min-width','0%');
-	//$('#content').css('height',originalContentHeight);
+	$('#content').css('height',originalContentHeight);
 	$('#buttonDiv').css('display',originalButtonDiv);
 	$('#player').css('max-width','100%');
 	$('#stopButton').css('animation','none');
