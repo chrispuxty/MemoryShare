@@ -62,6 +62,7 @@ function disableFullScreen(){
 	$('#buttonDisabler').css('display','block');
 	$('#music_record').css('animationPlayState','paused');
 	$('#music_thumb').css('animationPlayState','paused');
+	$('#music_record').css('animation','');
     $('.blink').css('animation','blinker 4s ease infinite alternate');
 	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "<img class=\"button-icon\" src=\"Play.png\"><br/>Play";
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = function(){enableFullScreen(false)};
