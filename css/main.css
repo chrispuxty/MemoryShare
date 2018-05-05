@@ -70,10 +70,10 @@ video {height: 99%; width: 100%;}
 
 .buttonBack2 {position: relative;
     width: 80%;
-    height: 31%;
+    height: 30%;
     z-index: 5;
     background: inherit;
-    margin: 5% auto auto auto;}
+    margin: 6% auto auto auto;}
 
 .buttonBack3 {position: relative;
     top: -100%;
