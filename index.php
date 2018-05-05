@@ -128,7 +128,7 @@ echo "if (destinations.indexOf(dest)!=-1) {
 	document.getElementById('clicker').src = matchedOnClickPlays[destinations.indexOf(dest)];
 	//alert(document.getElementById('clicker').src);
 	document.getElementById('clicker').play();
-	document.getElementById('clicker').addEventListener('ended',function(){".(($severeMode)?"setTimeout(function(){":"")."window.open('index.php?path=".$path.(($severeMode)?"&recurse=":"/")."'+dest,'_self');".(($severeMode)?"},2000);":"")."},false);
+	document.getElementById('clicker').addEventListener('ended',function(){".(($severeMode)?"setTimeout(function(){":"")."window.open('index.php?path=".preg_replace('#/+#','/',$path.(($severeMode)?"&recurse=":"/"))."'+dest,'_self');".(($severeMode)?"},2000);":"")."},false);
 	}
 else window.open('index.php?path=".$path.(($severeMode)?"&recurse=":"/")."'+dest,'_self');
 
