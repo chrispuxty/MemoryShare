@@ -183,18 +183,29 @@ if($path != "media" && $file == "") echo '<br/><br/><span class="path-text">My '
 $extension = trimExt($file,true);
 echo ((!$inhibitAutoplay&&is_readable($path."/.autoplay.mp3")&&strlen($extension) < 1)?"<audio id='autoplayer' autoplay src='".$path."/.autoplay.mp3'></audio>":"");
 if ($extension == strtolower("mp3") || $extension == strtolower("wav") || $extension == strtolower("ogg") || $extension == strtolower("flac") || $extension == strtolower("wma"))
-{echo "<audio id='player' hidden autoplay>
+{
+//NEW - record spinner
+echo '<div><div id="music_record" class="record_sway">
+<div id="music_thumb" class="record_thumb"></div></div>';
+$finalCol = 0;
+$records = ["Record_Blue.png","Record_Orange.png","Record_Green.png","Record_Pink.png"];
+for ($col = 0; $col < 4; $col++) if(strpos($path."/".$file,$media[$col])!==false) {$finalCol = $col; break;}
+
+
+	echo "<audio id='player' hidden autoplay>
 <source  src='".$localPath.$path."/".$file."' type='audio/mp3'>
 </audio>"
 .(($severeMode
 ||true //HACK
 )?"
 <style type='text/css'>
-#content {background-image: url('" . recurseToThumb($path."/".$file)."');
+#music_record {background-image: url('".$records[$finalCol]."');}
+#music_thumb {background-image: url('".recurseToThumb($path."/".$file)."');}
+#content {background-image: /*url('" . recurseToThumb($path."/".$file)."');*/ none;
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
-</style>":""); $enablePopup = true;
+</style>":""); $enablePopup = false;
 if ($severeMode) echo "<script type='text/javascript' src='js/fullscreenSevere.js'></script>";}
 elseif ($extension == strtolower("avi") || $extension == strtolower("mov") || $extension == strtolower("wmv") || $extension == strtolower("mpg") || $extension == strtolower("mp4")){
 echo "<video id='player' autoplay poster='loading.gif' name='media'><source src='".$localPath.$path."/".$file."' type='video/".$extension."'>

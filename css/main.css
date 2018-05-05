@@ -316,3 +316,64 @@ div.#virtualKeyboardChromeExtension {
 
 .button-icon {max-width: 100px;}
 .path-text {color: #b7b7b7; font-size: 28pt;}
+
+
+#music_thumb {   z-index: 10;
+    border-radius: 100%;
+    position: absolute;
+    background: url(file:///home/beacon515l/memory-box/media/Music/.thumbs/Elvis%20Presley.jpg) center center;
+    width: calc(110%/3);
+    background-size: cover;
+    padding-bottom: calc(110%/3);
+    top: calc(95%/3);
+    left: calc(95%/3);}
+#music_record {position: relative;
+    z-index: 5;
+    background: url(file:///home/beacon515l/memory-box/Record_Blue.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 60%;
+    padding-bottom: 60%;}
+
+    @keyframes record_rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+    @keyframes record_sway {
+0% {transform: rotateX(72deg) rotateZ(0.025deg);}
+6.25% {transform: rotateX(71.810799376173deg) rotateZ(0.119856384651051deg);}
+12.5% {transform: rotateX(72.2473395616558deg) rotateZ(-0.14411354888848deg);}
+18.75% {transform: rotateX(71.8658567704999deg) rotateZ(-0.24191859877263deg);}
+25% {transform: rotateX(71.9280241708337deg) rotateZ(-0.249287894925957deg);}
+31.25% {transform: rotateX(72.2282363126819deg) rotateZ(-0.151617478273038deg);}
+37.5% {transform: rotateX(71.7736054094983deg) rotateZ(-0.211733001300533deg);}
+43.75% {transform: rotateX(72.067726447077deg) rotateZ(-0.004819502819504deg);}
+50% {transform: rotateX(72.1378566703104deg) rotateZ(0.249979434347416deg);}
+56.25% {transform: rotateX(71.7520552866392deg) rotateZ(0.105553414503328deg);}
+62.5% {transform: rotateX(72.1862782901198deg) rotateZ(0.079951034067805deg);}
+68.75% {transform: rotateX(72.0044254812764deg) rotateZ(-0.083103031086594deg);}
+75% {transform: rotateX(71.8079363346691deg) rotateZ(0.135077969102525deg);}
+81.25% {transform: rotateX(72.2466568980101deg) rotateZ(-0.134607739169001deg);}
+87.5% {transform: rotateX(71.8696122494783deg) rotateZ(-0.241215502930145deg);}
+93.75% {transform: rotateX(71.9237973447244deg) rotateZ(-0.249970326005695deg);}
+100% {transform: rotateX(72deg) rotateZ(0.119856384651051deg);}
+
+
+/*
+
+
+  0% {transform: rotateX(72deg) rotateZ(0.025deg);}
+  12.5% {transform: rotateX(72.025deg) rotateZ(0deg);}
+  25% {transform: rotateX(72.05deg) rotateZ(-0.025deg);}
+  37.5% {transform: rotateX(72.025deg) rotateZ(-0.05deg);}
+  50%  {transform: rotateX(72deg) rotateZ(-0.025deg);}
+  67.5% {transform: rotateX(71.925deg) rotateZ(0deg);}
+  75%  {transform: rotateX(71.95deg) rotateZ(0.025deg);}
+  87.5% {transform: rotateX(71.925deg) rotateZ(0.05deg);}
+  100% {transform: rotateX(72deg) rotateZ(0.025deg);}*/
+}
+
+.record_thumb {animation: record_rotate 8s linear infinite; }
+.record_sway {animation: record_sway 26s linear infinite; }

@@ -23,6 +23,7 @@ function toggleFullScreen(){
 	$('#stopButton').css('opacity','1');
 	$('#altPauseButton').css('display','none');
 	$('#buttonDisabler').css('display','block');
+	$('#music_record').css('animation','');
 	setTimeout(function(){if (document.getElementById('pauseButton').onclick == disableFullScreen) enableFullScreen();},transitionTime);
 	
 }
@@ -35,6 +36,9 @@ function enableFullScreen(){
 	$('#buttonDiv').css('display','none');
 	$('#player').css('max-width','100%');
 	$('#playbackControl').css('display','none');
+	$('.record_sway').css('animation_play_state','running');
+	$('.record_thumb').css('animation_play_state','running');
+	$('#music_record').css('animation','none');
 	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "<img class=\"button-icon\" src=\"Pause.png\"><br/>Pause";
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = disableFullScreen;
 	$('#buttonDisabler').css('display','none');
@@ -56,6 +60,8 @@ function disableFullScreen(){
 	$('#playbackControl').css('display','block');
 	$('#altPauseButton').css('display','none');
 	$('#buttonDisabler').css('display','block');
+	$('.record_sway').css('animation_play_state','paused');
+	$('.record_thumb').css('animation_play_state','paused');
     $('.blink').css('animation','blinker 4s ease infinite alternate');
 	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "<img class=\"button-icon\" src=\"Play.png\"><br/>Play";
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = enableFullScreen;
