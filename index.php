@@ -301,7 +301,7 @@ if(isset($_GET['recurse'])) $thumbs = getThumbs($path."/".$_GET['recurse']);
 //echo print_r($thumbs);
 
 if (!isset($_GET['recurse'])
-||true
+||!(($extension == strtolower("avi") || $extension == strtolower("mov") || $extension == strtolower("wmv") || $extension == strtolower("mpg") || $extension == strtolower("mp4")))
 ) {echo '<div id="buttonDiv"'.(($path=="media")?" style='margin-top: 1%;'":"").'>';
 
 //Offsetter
