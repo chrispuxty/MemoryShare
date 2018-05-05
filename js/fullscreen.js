@@ -42,7 +42,7 @@ function enableFullScreen(noPlayPause = false){
 	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "<img class=\"button-icon\" src=\"Pause.png\"><br/>Pause";
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = disableFullScreen;
 	$('#buttonDisabler').css('display','none');
-	$('#record_container').css('width','calc(90%*9/16)');
+	$('#record_container').css('width','calc(100%*9/16)');
 	$('#altPauseButton').css('display','block');
 	if (player != undefined && !noPlayPause) player.play();
 	$('.blink').css('animation','none');
