@@ -94,7 +94,7 @@ video {height: 99%; width: 100%;}
 position: fixed;
 background: #B7B7B7;
 right: 81px;
-bottom: -14px;
+bottom: -34px;
 width: 155px;
 height: 155px;
 border-radius: 100%;
@@ -221,7 +221,7 @@ input[type="submit"]{background-color: #cccc00;}
     position: fixed;
     background: #B7B7B7;
     left: 81px;
-bottom: -14px;
+bottom: -44px;
 width: 155px;
 height: 155px;
 border-radius: 100%;
@@ -233,7 +233,7 @@ border-radius: 100%;
     left: 23px;
     text-align: center;
     font-size: 28pt;
-    bottom: 23%;
+    bottom: 20%;
     /*display: none;*/
     width: 260px;
     height: 66px;
