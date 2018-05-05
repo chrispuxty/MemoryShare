@@ -28,7 +28,7 @@ function toggleFullScreen(){
 	
 }
 
-function enableFullScreen(var noPlayPause = false){
+function enableFullScreen(noPlayPause = false){
 	$('#content').css('min-height','83%');
 	$('#content').css('height','90%');
 	$('#content').css('width','74%');
