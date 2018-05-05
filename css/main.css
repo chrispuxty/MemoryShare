@@ -331,8 +331,8 @@ div.#virtualKeyboardChromeExtension {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 60%;
-    padding-bottom: 60%;}
+    width: 100%;
+    padding-bottom: 100%;}
 
     @keyframes record_rotate {
   0% {transform: rotate(0deg);}
