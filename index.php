@@ -185,7 +185,7 @@ echo ((!$inhibitAutoplay&&is_readable($path."/.autoplay.mp3")&&strlen($extension
 if ($extension == strtolower("mp3") || $extension == strtolower("wav") || $extension == strtolower("ogg") || $extension == strtolower("flac") || $extension == strtolower("wma"))
 {
 //NEW - record spinner
-echo '<div style="width: calc(100%*9/16);max-width: 100%;margin: 0 auto;"><div id="music_record" class="record_sway">
+echo '<div id="record_container" style="width: calc(100%*9/16);max-width: 100%;margin: 0 auto;"><div id="music_record" class="record_sway">
 <div id="music_thumb" class="record_thumb"></div></div></div>';
 $finalCol = 0;
 $records = ["Record_Blue.png","Record_Orange.png","Record_Green.png","Record_Pink.png"];
