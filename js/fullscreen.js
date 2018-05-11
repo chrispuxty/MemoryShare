@@ -78,7 +78,7 @@ function disableFullScreen(){
 	//clearInterval(window.timer);
 	//if (window.pictures != undefined) window.timer = setTimeout(function(){enableFullScreen(true)},transitionTime);
 }
-	
+	setInterval(function(){advancePicture()},slideShowAdvanceTime);
 function advancePicture(){ if (window.pictures != undefined && window.pictures.length > 0 && advance) {
 			if (++window.picturesCount == window.pictures.length) window.picturesCount = 0;
 			$('#content').animate({opacity: 0},500);
@@ -88,5 +88,6 @@ function advancePicture(){ if (window.pictures != undefined && window.pictures.l
 			$('#content').css('background-position','center');
 			$('#content').css('background-repeat','no-repeat');
 			$('#content').animate({opacity: 1},500);},600);
-			setTimeout(function(){setTimeout(function(){advancePicture();},slideShowAdvanceTime*0.01)},slideShowAdvanceTime*0.99);}}
+			//setTimeout(function(){setTimeout(function(){advancePicture();},slideShowAdvanceTime*0.01)},slideShowAdvanceTime*0.99);
+}}
 
