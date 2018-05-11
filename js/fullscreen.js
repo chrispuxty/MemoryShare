@@ -22,7 +22,7 @@ function toggleFullScreen(){
 	$('#stopButton').css('-webkit-animation','none');
 	$('#stopButton').css('opacity','1');
 	$('#altPauseButton').css('display','none');
-	$('#buttonDisabler').css('display','block');
+	//$('#buttonDisabler').css('display','block');
 	$('#music_record').css('animation','');
 	setTimeout(function(){if (document.getElementById('pauseButton').onclick == disableFullScreen) enableFullScreen(true);},transitionTime);
 	
