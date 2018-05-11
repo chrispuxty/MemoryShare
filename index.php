@@ -195,7 +195,7 @@ for ($col = 0; $col < 4; $col++) if(strpos($path."/".$file,$media[$col])!==false
 
 	echo "<audio id='player' hidden autoplay>
 <source  src='".$localPath.$path."/".$file."' type='audio/mp3'>
-</audio>".((!$severeMode&&false
+</audio>".((!$severeMode||true
 //||!isset($_GET['recurse'])
 )?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='musicDisableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
 <script type='text/javascript' src='".
@@ -217,7 +217,7 @@ echo "<video id='player' autoplay poster='loading.gif' name='media'><source src=
 </video>
 <div id='playbackControl' style='display: none;'><span id='playbackControlText'>"//"Press Play to continue</br>your ".((strpos($path,"Old Movies") > 0)?"movie":"message")
 ."</span></div>
-".((!$severeMode&&false
+".((!$severeMode||true
 //||!isset($_GET['recurse'])
 )?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='disableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
 <script type='text/javascript' src='".
@@ -334,7 +334,7 @@ echo '</div>';}
 if(strtolower($extension) == "kanvar") {echo "<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='disableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>";}
 if ($file != "" || $path !="media") {echo '<div id="stopButtonText" onclick="window.open(\'index.php\',\'_self\');"><img class="button-icon" src="Stop.png"><br/>'.((true||$file != "")?'Stop':'Back').'</div>
 <div id="stopButton" onclick="window.open(\'index.php\',\'_self\');"></div>';
-echo '<div id="buttonDisabler"></div><div id="altPauseButton" onclick="'.(($severeMode)?"window.open('index.php','_self');":"toggleFullScreen();").'" style="'.(($file != ""/*&&$severeMode*/)?"display: block;":"").'">';
+echo '<div id="buttonDisabler"></div><div id="altPauseButton" onclick="'.(($severeMode)?"window.open('index.php','_self');":"toggleFullScreen();").'" style="'.(($file != ""&&$severeMode)?"display: block !important;":"display: block;").'">';
 if(!severe) for ($i = 0; $i < $mediaCount; $i++) echo '<div class="altButton"></div>';
 echo '</div>';}
 echo '<div id="pauseButtonReturner" onclick="window.open(\'index.php\',\'_self\');" style="'.(($file != "" && $severeMode && false
