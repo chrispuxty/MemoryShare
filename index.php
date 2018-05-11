@@ -59,7 +59,8 @@ if (isset($autoplayFile)) $autoplayFile = $autoplayFile[0];
 <script type="text/javascript" src="./js/date_time.js"></script>
 <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="./config.php"></script>
-<script type="text/javascript" src="./js/screensaver.php"></script>
+<!--<script type="text/javascript" src="./js/screensaver.php"></script>-->
+    <!-- Screensaver disabled-->
 <script type="text/javascript" src="./js/alarm.js"></script>
 <script type="text/javascript">
 window.oncontextmenu = function(event) {
