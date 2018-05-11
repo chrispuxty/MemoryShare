@@ -56,10 +56,10 @@ video {height: 99%; width: 100%;}
     background: none !important;
 }
 
-#buttonDiv div:nth-child(1) .buttonBack1, #buttonDiv div:nth-child(1) .buttonBack2 {background: #29AAE1;}
-#buttonDiv div:nth-child(2) .buttonBack1, #buttonDiv div:nth-child(2) .buttonBack2 {background: #F6893E;}
-#buttonDiv div:nth-child(3) .buttonBack1, #buttonDiv div:nth-child(3) .buttonBack2 {background: #5FBC5E;}
-#buttonDiv div:nth-child(4) .buttonBack1, #buttonDiv div:nth-child(4) .buttonBack2 {background: #DC559F;}
+#buttonDiv div:nth-child(1) .buttonBack1, #buttonDiv div:nth-child(1) .buttonBack, #altPauseButton div:nth-child(1) {background: #29AAE1;}
+#buttonDiv div:nth-child(2) .buttonBack1, #buttonDiv div:nth-child(2) .buttonBack2, #altPauseButton div:nth-child(2) {background: #F6893E;}
+#buttonDiv div:nth-child(3) .buttonBack1, #buttonDiv div:nth-child(3) .buttonBack2, #altPauseButton div:nth-child(3) {background: #5FBC5E;}
+#buttonDiv div:nth-child(4) .buttonBack1, #buttonDiv div:nth-child(4) .buttonBack2, #altPauseButton div:nth-child(4) {background: #DC559F;}
 
 .buttonBack1 {position: relative;
     width: 100%;
@@ -261,7 +261,17 @@ border-radius: 100%;
     left: 411px;
     width: 58%;
     height: 10%;
-    opacity: 0;}
+    opacity: 0.2;}
+
+.button > #altPauseButton {
+    width: 22%;
+    margin-left: 1.25%;
+    margin-right: 1.25%;
+    height: 100%;
+    float: left;
+}
+
+
 
 #pauseButtonReturner {
     display: none;
