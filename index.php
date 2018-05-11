@@ -297,7 +297,7 @@ if(($mediaCarry+1)==$recurseCount) $pathString = "index.php?path=".$path;
 
 echo '<script type="text/javascript">document.getElementById("player").addEventListener(\'ended\',function(){'.(($severeMode)?"setTimeout(function(){":"").'window.open(\''.$pathString.'\',\'_self\');'.(($severeMode)?"},2000);":"").'},false);</script>';
 
-echo '</div><div class=\'blink\' id=\'pauseButton\' onclick=\'disableFullScreen();\'></div><div class=\'blink\' id=\'pauseButtonText\'  onclick=\'disableFullScreen();\'><img class=\'button-icon\' src=\'Pause.png\'><br/>Pause</div>';
+echo '</div>';
 //echo $path."/".$_GET['recurse'];
 if(isset($_GET['recurse'])) $thumbs = getThumbs($path."/".$_GET['recurse']);
 //echo print_r($thumbs);
@@ -330,6 +330,7 @@ if($mediaCount > 4) echo '<div class="button" style="background: '.$colours[$col
 //echo ($path != "media");) echo '<div class="button" onclick="window.open(\'index.php\',\'_self\');">Stop</div>';
 
 echo '</div>';}
+if(strtolower($extension) == "kanvar") {echo "<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='disableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>";}
 if ($file != "" || $path !="media") echo '<div id="stopButtonText" onclick="window.open(\'index.php\',\'_self\');"><img class="button-icon" src="Stop.png"><br/>'.((true||$file != "")?'Stop':'Back').'</div>
 <div id="stopButton" onclick="window.open(\'index.php\',\'_self\');"></div>';
 echo '<div id="buttonDisabler"></div><div id="altPauseButton" onclick="'.(($severeMode)?"window.open('index.php','_self');":"toggleFullScreen();").'" style="'.(($file != ""&&$severeMode)?"display: block;":"display: none;").'"></div>';
