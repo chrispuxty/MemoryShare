@@ -62,7 +62,7 @@ function enableFullScreen(noPlayPause = false){
 
 function disableFullScreen(mmode = false){
     document.getElementById('clicker').play();
-    if(mmode === true) musicmode = true;
+    if(mmode === true && false ) musicmode = true;
     if(musicmode === true) {
 	$('#content').css('min-height','0%');
 	$('#content').css('min-width','0%');
