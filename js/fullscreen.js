@@ -61,7 +61,7 @@ function disableFullScreen(){
 	$('#stopButton').css('opacity','1');
 	$('#playbackControl').css('display','block');
 	$('#altPauseButton').css('display','none');
-	$('#buttonDisabler').css('display','block');
+	//$('#buttonDisabler').css('display','block');
 	$('#music_record').css('animationPlayState','paused');
 	$('#music_thumb').css('animationPlayState','paused');
 	$('#music_record').css('animation','');
