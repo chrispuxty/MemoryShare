@@ -16,16 +16,18 @@ window.onload = function(){advancePicture(); enableFullScreen(false);}
 //window.timer = setTimeout(function(){enableFullScreen();},transitionTime);
 
 function toggleFullScreen(){
+    if(!severeMode){
 	$('#content').css('min-height','0%');
 	$('#content').css('min-width','0%');
 	$('#content').css('height',originalContentHeight);
 	$('#buttonDiv').css('display',originalButtonDiv);
 	$('#player').css('max-width','100%');
+    $('#altPauseButton').css('display','none');
+    $('#record_container').css('width','calc(64%*9/16)');}
 	$('#stopButton').css('animation','none');
 	$('#stopButton').css('-webkit-animation','none');
 	$('#stopButton').css('opacity','1');
-    $('#record_container').css('width','calc(64%*9/16)');
-	$('#altPauseButton').css('display','none');
+
 	//$('#buttonDisabler').css('display','block');
 	$('#music_record').css('animation','');
     document.getElementById('clicker').play();
@@ -72,12 +74,12 @@ function disableFullScreen(mmode = false){
 	$('#stopButton').css('-webkit-animation','none');
 	$('#stopButton').css('opacity','1');
 	$('#playbackControl').css('display','block');
-	$('#altPauseButton').css('display','none');
+	if(!severeMode) $('#altPauseButton').css('display','none');
 	//$('#buttonDisabler').css('display','block');
 	$('#music_record').css('animationPlayState','paused');
 	$('#music_thumb').css('animationPlayState','paused');
 	$('#music_record').css('animation','');
-	$('#record_container').css('width','calc(64%*9/16)');
+	if (!severeMode) $('#record_container').css('width','calc(64%*9/16)');
     $('.blink').css('animation','blinker 4s ease infinite alternate');
 	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "<img class=\"button-icon\" src=\"Play.png\"><br/>Play";
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = function(){enableFullScreen(false)};

@@ -341,5 +341,6 @@ echo '<div id="pauseButtonReturner" onclick="window.open(\'index.php\',\'_self\'
 //&& !($extension == strtolower("avi") || $extension == strtolower("mov") || $extension == strtolower("wmv") || $extension == strtolower("mpg") || $extension == strtolower("mp4"))
 )?"display: block;":"").'"></div>';
 ?>
+    <script>var severeMode = <?= $severeMode ? "true" : "false" ?>;</script>
 </body>
 </html>
