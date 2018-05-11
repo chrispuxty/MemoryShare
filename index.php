@@ -195,7 +195,7 @@ for ($col = 0; $col < 4; $col++) if(strpos($path."/".$file,$media[$col])!==false
 
 	echo "<audio id='player' hidden autoplay>
 <source  src='".$localPath.$path."/".$file."' type='audio/mp3'>
-</audio>".((!$severeMode
+</audio>".((!$severeMode&&false
 //||!isset($_GET['recurse'])
 )?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='musicDisableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
 <script type='text/javascript' src='".
@@ -217,7 +217,7 @@ echo "<video id='player' autoplay poster='loading.gif' name='media'><source src=
 </video>
 <div id='playbackControl' style='display: none;'><span id='playbackControlText'>"//"Press Play to continue</br>your ".((strpos($path,"Old Movies") > 0)?"movie":"message")
 ."</span></div>
-".((!$severeMode
+".((!$severeMode&&false
 //||!isset($_GET['recurse'])
 )?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='disableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
 <script type='text/javascript' src='".
