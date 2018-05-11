@@ -76,7 +76,7 @@ function disableFullScreen(){
 	if (player != undefined) player.pause();
 	advance = false;
 	//clearInterval(window.timer);
-	if (window.pictures != undefined) window.timer = setTimeout(function(){enableFullScreen(true)},transitionTime);
+	//if (window.pictures != undefined) window.timer = setTimeout(function(){enableFullScreen(true)},transitionTime);
 }
 	
 function advancePicture(){ if (window.pictures != undefined && window.pictures.length > 0 && advance) {
