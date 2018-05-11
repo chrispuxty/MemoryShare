@@ -24,6 +24,7 @@ function toggleFullScreen(){
 	$('#stopButton').css('animation','none');
 	$('#stopButton').css('-webkit-animation','none');
 	$('#stopButton').css('opacity','1');
+    $('#record_container').css('width','calc(64%*9/16)');
 	$('#altPauseButton').css('display','none');
 	//$('#buttonDisabler').css('display','block');
 	$('#music_record').css('animation','');
