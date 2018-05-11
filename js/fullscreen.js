@@ -69,6 +69,7 @@ function disableFullScreen(mmode = false){
 	$('#content').css('height',originalContentHeight);
 	//$('#buttonDiv').css('display',originalButtonDiv);
 	//$('#player').css('max-width','100%');
+        if (!severeMode) $('#record_container').css('width','calc(64%*9/16)');
     }
 	$('#stopButton').css('animation','none');
 	$('#stopButton').css('-webkit-animation','none');
@@ -79,7 +80,7 @@ function disableFullScreen(mmode = false){
 	$('#music_record').css('animationPlayState','paused');
 	$('#music_thumb').css('animationPlayState','paused');
 	$('#music_record').css('animation','');
-	if (!severeMode) $('#record_container').css('width','calc(64%*9/16)');
+
     $('.blink').css('animation','blinker 4s ease infinite alternate');
 	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "<img class=\"button-icon\" src=\"Play.png\"><br/>Play";
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = function(){enableFullScreen(false)};
