@@ -48,7 +48,7 @@ function enableFullScreen(noPlayPause = false){
 	$('#record_container').css('width','calc(100%*9/16)');
 	$('#altPauseButton').css('display','block');
 	if (player != undefined && !noPlayPause) player.play();
-	advance = true; advancePicture();
+	advance = true; //advancePicture();
 	$('.blink').css('animation','none');
 	//$('#stopButton').css('-webkit-animation','blinker 4s infinite');
 	}
