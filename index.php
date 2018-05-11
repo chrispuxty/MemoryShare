@@ -211,7 +211,7 @@ for ($col = 0; $col < 4; $col++) if(strpos($path."/".$file,$media[$col])!==false
 		background-repeat: no-repeat;
 		background-position: center;
 </style>":""); $enablePopup = false;
-if ($severeMode) echo "<script type='text/javascript' src='js/fullscreenSevere.js'></script>";}
+if ($severeMode&&false) echo "<script type='text/javascript' src='js/fullscreenSevere.js'></script>";}
 elseif ($extension == strtolower("avi") || $extension == strtolower("mov") || $extension == strtolower("wmv") || $extension == strtolower("mpg") || $extension == strtolower("mp4")){
 echo "<video id='player' autoplay poster='loading.gif' name='media'><source src='".$localPath.$path."/".$file."' type='video/".$extension."'>
 </video>
@@ -221,7 +221,7 @@ echo "<video id='player' autoplay poster='loading.gif' name='media'><source src=
 //||!isset($_GET['recurse'])
 )?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='disableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
 <script type='text/javascript' src='".
-(($severeMode)?"js/fullscreenSevere.js":"js/fullscreen.js")."'></script>";
+(($severeMode&&false)?"js/fullscreenSevere.js":"js/fullscreen.js")."'></script>";
 //preloadRecurse("media/Videos");
 //preloadRecurse("media/Talk");
 }
@@ -276,7 +276,7 @@ document.getElementById('slideShowPlayer').src = audioArray[audioCount];
 document.getElementById('slideShowPlayer').play();
 
 </script><script type='text/javascript' src='".
-(($severeMode)?"js/fullscreenSevere.js":"js/fullscreen.js")."'></script>";
+(($severeMode&&false)?"js/fullscreenSevere.js":"js/fullscreen.js")."'></script>";
 	}
 
 
