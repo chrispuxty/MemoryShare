@@ -1,5 +1,6 @@
 // Content Fullscreener
 var timer;
+var advance = true;
 var transitionTime = 15000;
 var slideShowAdvanceTime = 15000;
 //var forceFullscreen = false;
@@ -13,11 +14,11 @@ window.onload = function(){advancePicture(); enableFullScreen(false);}
 //window.timer = setTimeout(function(){enableFullScreen();},transitionTime);
 
 function toggleFullScreen(){
-	$('#content').css('min-height','0%');
-	$('#content').css('min-width','0%');
-	$('#content').css('height',originalContentHeight);
+	//$('#content').css('min-height','0%');
+	//$('#content').css('min-width','0%');
+	//$('#content').css('height',originalContentHeight);
 	//$('#buttonDiv').css('display',originalButtonDiv);
-	$('#player').css('max-width','100%');
+	//$('#player').css('max-width','100%');
 	$('#stopButton').css('animation','none');
 	$('#stopButton').css('-webkit-animation','none');
 	$('#stopButton').css('opacity','1');
@@ -46,16 +47,17 @@ function enableFullScreen(noPlayPause = false){
 	$('#record_container').css('width','calc(100%*9/16)');
 	$('#altPauseButton').css('display','block');
 	if (player != undefined && !noPlayPause) player.play();
+	if(!advance) {advance = true; advancePicture();}
 	$('.blink').css('animation','none');
 	//$('#stopButton').css('-webkit-animation','blinker 4s infinite');
 	}
 
 function disableFullScreen(){
-	$('#content').css('min-height','0%');
-	$('#content').css('min-width','0%');
-	$('#content').css('height',originalContentHeight);
-	$('#buttonDiv').css('display',originalButtonDiv);
-	$('#player').css('max-width','100%');
+	//$('#content').css('min-height','0%');
+	//$('#content').css('min-width','0%');
+	//$('#content').css('height',originalContentHeight);
+	//$('#buttonDiv').css('display',originalButtonDiv);
+	//$('#player').css('max-width','100%');
 	$('#stopButton').css('animation','none');
 	$('#stopButton').css('-webkit-animation','none');
 	$('#stopButton').css('opacity','1');
@@ -71,6 +73,7 @@ function disableFullScreen(){
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = function(){enableFullScreen(false)};
     if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').onclick = function(){enableFullScreen(false)};
 	if (player != undefined) player.pause();
+	advance = false;
 	//clearInterval(window.timer);
 	if (window.pictures != undefined) window.timer = setTimeout(function(){enableFullScreen(true)},transitionTime);
 }
@@ -84,5 +87,5 @@ function advancePicture(){ if (window.pictures != undefined && window.pictures.l
 			$('#content').css('background-position','center');
 			$('#content').css('background-repeat','no-repeat');
 			$('#content').animate({opacity: 1},500);},600);
-setTimeout(function(){advancePicture();},slideShowAdvanceTime);}}
+if (advance) setTimeout(function(){advancePicture();},slideShowAdvanceTime);}}
 
