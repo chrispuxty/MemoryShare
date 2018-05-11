@@ -251,6 +251,7 @@ else if (strtolower($extension) == "kanvar") {
 	$picPath = dirname($path."/".$file)."/".$picFolder;
 	$slideshow = getMedia($picPath); shuffle($slideshow);
 	echo "<audio id='slideShowPlayer' autoplay hidden></audio>
+<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='disableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>
 	<img id='slideshow'><script type='text/javascript'>
 	//document.getElementById('content').onclick = function(){window.timer = setTimeout(function(){enableFullScreen();},transitionTime); disableFullScreen();};
 	var picturesCount = 0;

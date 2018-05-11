@@ -8,6 +8,7 @@ var originalButtonDiv = $('#buttonDiv').css('display');
 var originalContentHeight = $('#content').css('height');
 if (originalButtonDiv === undefined) originalButtonDiv = "";
 var player = document.getElementById('player');
+if(player==null) player = document.getElementById('slideShowPlayer');
 //if(!forceFullscreen)
 window.onload = function(){advancePicture(); enableFullScreen(false);}
 	//window.onmousedown = function(){disableFullScreen();}
