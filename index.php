@@ -218,7 +218,7 @@ echo "<video id='player' autoplay poster='loading.gif' name='media'><source src=
 ."</span></div>
 ".((!$severeMode
 //||!isset($_GET['recurse'])
-)?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
+)?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='disableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
 <script type='text/javascript' src='".
 (($severeMode)?"js/fullscreenSevere.js":"js/fullscreen.js")."'></script>";
 //preloadRecurse("media/Videos");
@@ -328,7 +328,7 @@ if($mediaCount > 4) echo '<div class="button" style="background: '.$colours[$col
 //echo ($path != "media");) echo '<div class="button" onclick="window.open(\'index.php\',\'_self\');">Stop</div>';
 
 echo '</div>';}
-if ($file != "" || $path !="media") echo '<div id="stopButtonText" ><img class="button-icon" src="Stop.png"><br/>'.((true||$file != "")?'Stop':'Back').'</div>
+if ($file != "" || $path !="media") echo '<div id="stopButtonText" onclick="window.open(\'index.php\',\'_self\');"><img class="button-icon" src="Stop.png"><br/>'.((true||$file != "")?'Stop':'Back').'</div>
 <div id="stopButton" onclick="window.open(\'index.php\',\'_self\');"></div>';
 echo '<div id="buttonDisabler"></div><div id="altPauseButton" onclick="'.(($severeMode)?"window.open('index.php','_self');":"toggleFullScreen();").'" style="'.(($file != ""&&$severeMode)?"display: block;":"").'"></div>';
 echo '<div id="pauseButtonReturner" onclick="window.open(\'index.php\',\'_self\');" style="'.(($file != "" && $severeMode
