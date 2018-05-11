@@ -4,6 +4,7 @@ var advance = true;
 var transitionTime = 15000;
 var slideShowAdvanceTime = 15000;
 //var forceFullscreen = false;
+var musicmode = false;
 var originalButtonDiv = $('#buttonDiv').css('display');
 var originalContentHeight = $('#content').css('height');
 if (originalButtonDiv === undefined) originalButtonDiv = "";
@@ -53,12 +54,17 @@ function enableFullScreen(noPlayPause = false){
 	//$('#stopButton').css('-webkit-animation','blinker 4s infinite');
 	}
 
-function disableFullScreen(){
-	//$('#content').css('min-height','0%');
-	//$('#content').css('min-width','0%');
-	//$('#content').css('height',originalContentHeight);
+	function musicDisableFullScreen(){disableFullScreen(true);}
+
+function disableFullScreen(mmode = false){
+    if(mmode === true) musicmode = true;
+    if(musicmode === true) {
+	$('#content').css('min-height','0%');
+	$('#content').css('min-width','0%');
+	$('#content').css('height',originalContentHeight);
 	//$('#buttonDiv').css('display',originalButtonDiv);
 	//$('#player').css('max-width','100%');
+    }
 	$('#stopButton').css('animation','none');
 	$('#stopButton').css('-webkit-animation','none');
 	$('#stopButton').css('opacity','1');

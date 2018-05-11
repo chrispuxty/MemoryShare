@@ -196,7 +196,7 @@ for ($col = 0; $col < 4; $col++) if(strpos($path."/".$file,$media[$col])!==false
 <source  src='".$localPath.$path."/".$file."' type='audio/mp3'>
 </audio>".((!$severeMode
 //||!isset($_GET['recurse'])
-)?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='disableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
+)?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='musicDisableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
 <script type='text/javascript' src='".
 (($severeMode)?"js/fullscreenSevere.js":"js/fullscreen.js")."'></script>"
 .(($severeMode
