@@ -196,7 +196,7 @@ for ($col = 0; $col < 4; $col++) if(strpos($path."/".$file,$media[$col])!==false
 <source  src='".$localPath.$path."/".$file."' type='audio/mp3'>
 </audio>".((!$severeMode
 //||!isset($_GET['recurse'])
-)?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
+)?"<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='disableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>":"")."
 <script type='text/javascript' src='".
 (($severeMode)?"js/fullscreenSevere.js":"js/fullscreen.js")."'></script>"
 .(($severeMode
@@ -227,7 +227,9 @@ echo "<video id='player' autoplay poster='loading.gif' name='media'><source src=
 elseif ($extension == strtolower("lee")) {
 $musicFolder = file_get_contents($path."/".$file);
 	$musicPath = dirname($path."/".$file)."/".$musicFolder;
-echo "<audio id='slideShowPlayer' autoplay hidden></audio><script type='text/javascript'>";
+echo "<audio id='slideShowPlayer' autoplay hidden></audio>
+<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='disableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>
+<script type='text/javascript'>";
 echo "audioArray = new Array(); audioCount = 0;";
 	$audioArray = array_flatten(recursiveMap('media/Music'));
 	shuffle($audioArray);
