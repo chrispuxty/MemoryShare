@@ -330,7 +330,7 @@ if($mediaCount > 4) echo '<div class="button" style="background: '.$colours[$col
 echo '</div>';}
 if ($file != "" || $path !="media") echo '<div id="stopButtonText" onclick="window.open(\'index.php\',\'_self\');"><img class="button-icon" src="Stop.png"><br/>'.((true||$file != "")?'Stop':'Back').'</div>
 <div id="stopButton" onclick="window.open(\'index.php\',\'_self\');"></div>';
-echo '<div id="buttonDisabler"></div><div id="altPauseButton" onclick="'.(($severeMode)?"window.open('index.php','_self');":"toggleFullScreen();").'" style="'.(($file != ""&&$severeMode)?"display: block;":"").'"></div>';
+echo '<div id="buttonDisabler"></div><div id="altPauseButton" onclick="'.(($severeMode)?"window.open('index.php','_self');":"toggleFullScreen();").'" style="'.(($file != ""&&$severeMode)?"display: block;":"display: none;").'"></div>';
 echo '<div id="pauseButtonReturner" onclick="window.open(\'index.php\',\'_self\');" style="'.(($file != "" && $severeMode
 //&& !($extension == strtolower("avi") || $extension == strtolower("mov") || $extension == strtolower("wmv") || $extension == strtolower("mpg") || $extension == strtolower("mp4"))
 )?"display: block;":"").'"></div>';
