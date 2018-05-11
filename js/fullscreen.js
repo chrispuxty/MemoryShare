@@ -88,5 +88,5 @@ function advancePicture(){ if (window.pictures != undefined && window.pictures.l
 			$('#content').css('background-position','center');
 			$('#content').css('background-repeat','no-repeat');
 			$('#content').animate({opacity: 1},500);},600);
-setTimeout(function(){advancePicture();},slideShowAdvanceTime);}}
+			setTimeout(function(){setTimeout(function(){advancePicture();},slideShowAdvanceTime*0.01)},slideShowAdvanceTime*0.99);}}
 
