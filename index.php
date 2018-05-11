@@ -251,7 +251,6 @@ else if (strtolower($extension) == "kanvar") {
 	$picPath = dirname($path."/".$file)."/".$picFolder;
 	$slideshow = getMedia($picPath); shuffle($slideshow);
 	echo "<audio id='slideShowPlayer' autoplay hidden></audio>
-<div class='blink' id='pauseButton' onclick='disableFullScreen();'></div><div class='blink' id='pauseButtonText'  onclick='disableFullScreen();'><img class='button-icon' src='Pause.png'><br/>Pause</div>
 	<img id='slideshow'><script type='text/javascript'>
 	//document.getElementById('content').onclick = function(){window.timer = setTimeout(function(){enableFullScreen();},transitionTime); disableFullScreen();};
 	var picturesCount = 0;
@@ -298,7 +297,7 @@ if(($mediaCarry+1)==$recurseCount) $pathString = "index.php?path=".$path;
 
 echo '<script type="text/javascript">document.getElementById("player").addEventListener(\'ended\',function(){'.(($severeMode)?"setTimeout(function(){":"").'window.open(\''.$pathString.'\',\'_self\');'.(($severeMode)?"},2000);":"").'},false);</script>';
 
-echo '</div>';
+echo '</div><div class=\'blink\' id=\'pauseButton\' onclick=\'disableFullScreen();\'></div><div class=\'blink\' id=\'pauseButtonText\'  onclick=\'disableFullScreen();\'><img class=\'button-icon\' src=\'Pause.png\'><br/>Pause</div>';
 //echo $path."/".$_GET['recurse'];
 if(isset($_GET['recurse'])) $thumbs = getThumbs($path."/".$_GET['recurse']);
 //echo print_r($thumbs);
