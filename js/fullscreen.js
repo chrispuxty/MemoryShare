@@ -41,6 +41,7 @@ function enableFullScreen(noPlayPause = false){
 	$('#music_record').css('animation','none');
 	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "<img class=\"button-icon\" src=\"Pause.png\"><br/>Pause";
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = disableFullScreen;
+    if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').onclick = disableFullScreen;
 	$('#buttonDisabler').css('display','none');
 	$('#record_container').css('width','calc(100%*9/16)');
 	$('#altPauseButton').css('display','block');
@@ -68,6 +69,7 @@ function disableFullScreen(){
     $('.blink').css('animation','blinker 4s ease infinite alternate');
 	if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').innerHTML = "<img class=\"button-icon\" src=\"Play.png\"><br/>Play";
 	if (document.getElementById('pauseButton') != undefined) document.getElementById('pauseButton').onclick = function(){enableFullScreen(false)};
+    if (document.getElementById('pauseButtonText') != undefined) document.getElementById('pauseButtonText').onclick = function(){enableFullScreen(false)};
 	if (player != undefined) player.pause();
 	//clearInterval(window.timer);
 	if (window.pictures != undefined) window.timer = setTimeout(function(){enableFullScreen(true)},transitionTime);
