@@ -291,7 +291,7 @@ else {
 $mediaCarry = ((isset($_GET['mediaCarry']))?$_GET['mediaCarry']:0);
 $pathString .= "?path=".$path.((isset($_GET['recurse']))?"&recurse=".$_GET['recurse']:"")."&mediaCarry=".$mediaCarry."&timerCarry=+getScreensaverTimeRemaining()";
 if($disableAutoplay&&file_exists($path."/.autoplayOnFinish")&&strlen($file)>0) $pathString .= "+'&sequentialOverride=".$file."'";} 
-if($severeMode) $pathString .= "&exclude=".$file."'";
+if($severeMode) $pathString .= "&exclude=".$file/*."'"*/;
 if(($mediaCarry+1)==$recurseCount) $pathString = "index.php?path=".$path;
 //echo $pathString;
 //echo $recurseCount;
