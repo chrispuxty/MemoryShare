@@ -26,7 +26,7 @@ $localPath = ""; //Broken by Chrome same-origin policy
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Kanvar Nayar - Dementia Project</title>
+<title>MemoryShare</title>
 <link rel="stylesheet" type="text/css" href="css/main.css"/>
 <script type="text/javascript" src="./js/date_time.js"></script>
 <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
